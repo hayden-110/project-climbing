@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="967.915" height="982.688" viewBox="0 0 967.915 982.688">
-  <g id="hero-box" transform="translate(0 -97.312)">
-    <path id="Path_30" data-name="Path 30" d="M0,39.607H953.454L781.017,1022.3H0Z" transform="translate(14.461 57.705)" fill="rgba(172,27,4,0.64)"/>
-    <path id="Path_16" data-name="Path 16" d="M0,39.607H930.062L781.017,1022.3H0Z" transform="translate(0 57.705)" fill="#e35039"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 242 983.0132"><defs><style>.cls-1{fill:#962817;opacity:0.73;}.cls-2{fill:#e35039;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="hero-box"><path id="Path_30" data-name="Path 30" class="cls-1" d="M9.1527,0,242,.0132l-212,983H7Z"/><path id="Path_16" data-name="Path 16" class="cls-2" d="M0,983.0132v-983L207,0,14,983.0132Z"/></g></g></g></svg>
