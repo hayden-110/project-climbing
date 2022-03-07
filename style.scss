@@ -100,11 +100,16 @@ nav {
     position: relative;
     max-height: 40vw;
     overflow: hidden;
+    width: 100vw;
     &-navigate {
-        background-color: #e35039;
+        
+        background-image: linear-gradient(150deg, rgb(227, 80, 57), rgb(208, 34, 7));
         z-index: 1;
-        padding: 4vw 0 0 8vw;
-        max-width: 25vw;
+        padding: 5vw 0vw 5vw 8vw;
+        margin-left: -3vw;
+        min-width: 32vw;
+        transform: skew(-5deg);
+        outline: rgba(123, 16, 0, 0.585) 20px solid;
 
         a {
             width: min-content;
@@ -115,7 +120,7 @@ nav {
             font-weight: 900;
             font-size: 4.5vw;
             white-space: nowrap;
-            transform: skew(0deg, -4deg);
+            transform: skew(0deg, -6deg);
             line-height: 5.5vw;
             transition: 0.1s;
 
@@ -127,20 +132,22 @@ nav {
         }
     }
     &-carousel {
-        
-        .hero-border-style {
-            position: absolute;
-            margin-left: -5px;
-            height: 45vw;
-        }
+        position: absolute;
+        right: 0;
+        // margin-right: 20px;
+        // .hero-border-style {
+            // position: absolute;
+            // margin-left: -5px;
+            // height: 45vw;
+        // }
         .hero-photo {
-            z-index: -1;
-            height: 45vw;
+            // z-index: -1;
+            width: 65vw;
         }
     }
 }
 
-.info {
+.other-activities {
     height: 15vw;
     max-width: 100vw;
     background-color: #0b7bb8;
@@ -148,13 +155,10 @@ nav {
     
     
     .yoga {
-        background: linear-gradient(135deg, #0b7cb8be, rgba(8, 69, 102, 0.527)), url('/assets/img/yoga.jpeg') center/cover;
+        background-image: url('/assets/img/yoga.jpeg');
         // -moz-box-shadow:    inset 0 0 10px #000000;
         // -webkit-box-shadow: inset 0 0 10px #000000;
         // box-shadow:         inset 0 0 10px #000000;
-        &:hover {
-        background: linear-gradient(135deg, #1e5370be, rgba(2, 38, 58, 0.527)), url('/assets/img/yoga.jpeg') center/cover;
-        }
     }
     .parkour {
         background-image: url("/assets/img/parkour.jpeg");
@@ -162,22 +166,43 @@ nav {
     .secret-circus {
         background-image: url("/assets/img/secret-circus.jpeg");
     }
+    .crossfit {
+        background-image: url("/assets/img/crossfit.jpeg");
+    }
+
+    .martial-arts {
+        background-image: url("/assets/img/martial-arts.jpeg");
+    }
+
+    .coworking{
+        background-image: url("/assets/img/coworking.jpeg");
+    }
 
     a {
         // position: relative;
         width: 20vw;
+        height: 15vw;
         background-size: cover;
         background-position: center;
         text-decoration: none;
         display: flex;
-        
+        // background-color: #318a66;
     }
     
     h2 {
+        transition: .3s;
         margin: auto;
         text-align: center;
         font-family: sans-serif;
         color: #fae3df;
+        background-color: #318a6699;
+        width: 100%;
+        line-height: 15vw;
+        &:hover{
+            transition: .5s;
+            font-size: 2vw;
+            background-color: #7fc719aa;
+        }
     }
 }
 
