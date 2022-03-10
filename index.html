@@ -52,6 +52,9 @@
         <a href="" class="yoga">
             <h2>YOGA</h2>
         </a>
+        <a href="" class="gym">
+            <h2>GYM</h2>
+        </a>
         <a href="" class="parkour">
             <h2>PARKOUR</h2>
         </a>
@@ -69,9 +72,182 @@
         </a>
     </div>
 
-    <!-- <div class="prices"></div> -->
+<div class="pricing">
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'session-entry')" id="defaultOpen">Session Entry</button>
+        <button class="tablinks" onclick="openCity(event, 'punchcards')">Punchcards</button>
+        <button class="tablinks" onclick="openCity(event, 'memberships')">Memberships</button>
+    </div>
+
+    <!-- Tab content -->
+    <div class="pricing-sect">
+
+        <div id="session-entry" class="pricing-block">
+
+            <div class="pricing-flex">
+                <div class="price-left">
+                    <div class="price">
+                        <h3>Adult</h3>
+                        <p>£13</p>
+                    </div>
+                    <div class="price">
+                        <h3>Consession*</h3>
+                        <p>£8.50</p>
+                    </div>
+                    <div class="price">
+                        <h3>Under 18's</h3>
+                        <p>£5</p>
+                    </div>
+                    <div class="price">
+                        <h3>Supervisor</h3>
+                        <p>FREE</p>
+                    </div>
+                </div>
+                <div class="price-right">
+                    <div class="price">
+                        <h3>Shoe Hire</h3>
+                        <p>£3</p>
+                    </div>
+                    <p class="price-desc">A registered climber can supervise 2 people.</p>
+                    <p class="price-desc">All climber must be aged between 4 - 99.</p>
+                    <!-- <p class="price-desc">If you climb here more than once a week, It may be worth looking at are punchcards or memberships.</p> -->
+                </div>
+            </div>
+            <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's and more
+            </p>
+        </div>
+
+        <div id="punchcards" class="pricing-block">
+            <div class="pricing-flex">
+                <div class="price-left">
+                    <div class="price">
+                        <h3>Adult 5 Climb Pass</h3>
+                        <p>£40</p>
+                    </div>
+                    <div class="price">
+                        <h3>Adult 10 Climb Pass</h3>
+                        <p>£70</p>
+                    </div>
+                    <div class="price">
+                        <h3>Consession 5 Climb Pass</h3>
+                        <p>£35</p>
+                    </div>
+                    <div class="price">
+                        <h3>Consession 10 Climb Pass</h3>
+                        <p>£60</p>
+                    </div>
+                </div>
+                <div class="price-right">
+                    <div class="price">
+                        <h3>Under 18's 10 Climb Pass</h3>
+                        <p>£45</p>
+                    </div>
+                    <p class="price-desc">Passes expire 120 days after purchase.</p>
+                    <p class="price-desc">You can share passes with one selected other.</p>
+                </div>
+            </div>
+            <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's and more
+            </p>
+        </div>
+
+        <div id="memberships" class="pricing-block">
+            <div class="pricing-flex">
+                <div class="price-col">
+                    <div class="price">
+                        <h3>Adult Monthly</h3>
+                        <p>£50</p>
+                    </div>
+                    <div class="price">
+                        <h3>Adult Annual</h3>
+                        <p>£500</p>
+                    </div>
+                    <div class="price-col">
+                        <div class="price">
+                            <h3>Consession Monthly</h3>
+                            <p>£40</p>
+                        </div>
+                        <div class="price">
+                            <h3>Consession Annual</h3>
+                            <p>£400</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-col">
+                    <div class="price">
+                        <h3>Unlimited Climbing +</h3>
+                    </div>
+                    <li>Unlimited free first time guest passes</li>
+                    <li>Two guest passes a month</li>
+                    <li>Free monthly training workshop</li>
+                    <li>Free weekly conditioning passes</li>
+                    <li>One yoga class a month</li>
+                    <li>Free shoe hire</li>
+                </div>
+            </div>
+            <div class="price-plus">
+                <div class="price-row"><h3>Monthly Membership Plus</h3></div>
+                <div class="pricing-flex">
+                    <div class="price-left">
+                    <div class="price">
+                        <h3>Adult Monthly</h3>
+                        <p>£50</p>
+                    </div>
+                        <div class="price">
+                            <h3>Consession Monthly</h3>
+                            <p>£40</p>
+                        </div>
+                    </div>
+                    <div class="price-right">
+                        <div class="price">
+                            <h3>Monthly Membership +</h3>
+                        </div>
+                        <li>Unlimited gym entry</li>
+                        <li>One weekly yoga class</li>
+                    </div>
+                </div>
+                <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's and more</p>
+            </div>
+
+            <div class="price-family">
+                <div class="price-row"><h3>Family Memberships</h3></div>
+                <div class="pricing-flex">
+                    <div class="price-left">
+                    <div class="price">
+                        <h3>Adult + Child</h3>
+                        <p>£70</p>
+                    </div>
+                        <div class="price">
+                            <h3>Adult + 2 Children</h3>
+                            <p>£90</p>
+                        </div>
+                        <div class="price">
+                            <h3>2 Adults + 1 Child</h3>
+                            <p>£100</p>
+                        </div>
+                        <div class="price">
+                            <h3>2 Adults + 2 Children</h3>
+                            <p>£120</p>
+                        </div>
+                    </div>
+                    <div class="price-right">
+                        <div class="price">
+                            <h3>2 Adults + 3 Children</h3>
+                            <p>£140</p>
+                        </div>
+                            <div class="price">
+                                <h3>2 Adults + 4 Children</h3>
+                                <p>£160</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2526.1055273005295!2d-1.981542984258899!3d50.717981379513176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a6e9ea7db1d7%3A0xa668d5cd75dbdc88!2sThe%20Project%20Climbing%20Centre!5e0!3m2!1sen!2suk!4v1646921506150!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     
-    
-    
+    <script src="/assets/scripts/home-func.js"></script>
 </body>
 </html>
