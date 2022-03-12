@@ -16,10 +16,10 @@ nav {
   background-size: 102%;
   background-repeat: no-repeat;
   background-position: top;
-  background-position-y: -1vw;
+  background-position-y: -0.5vw;
   display: flex;
   z-index: 2;
-  padding: 1vw 0 70px;
+  padding: 1vw 0 1.5vw;
   justify-content: space-between;
 }
 nav .logo {
@@ -171,10 +171,13 @@ nav .nav-links .capitan {
   width: 100%;
   font: 800 1.5vw/15vw lato, sans-serif;
 }
-.other-activities h2:hover {
+.other-activities a:hover, .other-activities .hover {
   transition: 0.5s;
   font-size: 1.8vw;
   background-color: #83850baa;
+}
+.other-activities .tiny {
+  font-size: 0.2vw;
 }
 
 .pricing {
@@ -254,6 +257,11 @@ nav .nav-links .capitan {
 .pricing .pricing-block .price-row h3 {
   text-align: center;
   font-size: 2vw;
+}
+
+.centre-details .map {
+  width: 50vw;
+  height: 50vw;
 }
 
 iframe {

@@ -18,11 +18,11 @@ nav {
     background-size: 102%;
     background-repeat: no-repeat;
     background-position: top;
-    background-position-y: -1vw;
+    background-position-y: -0.5vw;
     display: flex;
     z-index: 2;
 
-    padding: 1vw 0 70px;
+    padding: 1vw 0 1.5vw;
     justify-content: space-between;
 
     .logo {
@@ -198,11 +198,14 @@ nav {
         // line-height: 15vw;
         // font-size: 1.5vw;
         font: 800 1.5vw/15vw lato, sans-serif;
-        &:hover {
-            transition: 0.5s;
-            font-size: 1.8vw;
-            background-color: #83850baa;
-        }
+    }
+    a:hover, .hover {
+        transition: 0.5s;
+        font-size: 1.8vw;
+        background-color: #83850baa;
+    }
+    .tiny {
+        font-size: 0.2vw;
     }
 }
 
@@ -304,6 +307,13 @@ nav {
             // padding: 1vw;
             }
         }
+    }
+}
+
+.centre-details {
+    .map {
+        width: 50vw;
+        height: 50vw;
     }
 }
 

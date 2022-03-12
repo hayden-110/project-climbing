@@ -1,3 +1,42 @@
+//hero autoplay
+
+let slideIndex = 0;
+const hero = document.querySelector('.hero-navigate');
+const aTags = document.querySelectorAll('.hero-navigate a');
+
+heroAuto();
+
+
+// heroAuto();
+function heroAuto() {
+  // console.log(aTags);
+  for (let i =0; i < aTags.length; i++){
+    aTags[i].classList.remove('hover');
+    aTags[i].classList.add('tiny');
+    
+    console.log('for-loop', aTags[i])
+  }
+  slideIndex++;
+  if (slideIndex > aTags.length) {slideIndex = 1}
+  aTags[slideIndex-1].classList.add('hover');;
+  setTimeout( heroAuto, 3000);
+}
+
+// var slideIndex = 0;
+// showSlides();
+
+// function showSlides() {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}
+//   slides[slideIndex-1].style.display = "block";
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// } 
+
 // prices tab menu
 document.getElementById("defaultOpen").click();
 
@@ -20,4 +59,4 @@ function openCity(evt, cityName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
-  } 
+  }
