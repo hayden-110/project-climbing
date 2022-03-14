@@ -123,11 +123,11 @@ nav {
             line-height: 5.5vw;
             transition: 0.2s;
 
-            &:hover {
-                color: #31368a;
-                font-size: 5vw;
-                transition: 0.5s;
-            }
+        }
+        a:hover, .hover {
+            color: #31368a;
+            font-size: 5vw;
+            transition: 0.5s;
         }
     }
     &-carousel {
@@ -198,14 +198,11 @@ nav {
         // line-height: 15vw;
         // font-size: 1.5vw;
         font: 800 1.5vw/15vw lato, sans-serif;
-    }
-    a:hover, .hover {
-        transition: 0.5s;
-        font-size: 1.8vw;
-        background-color: #83850baa;
-    }
-    .tiny {
-        font-size: 0.2vw;
+        :hover {
+            transition: 0.5s;
+            font-size: 1.8vw;
+            background-color: #83850baa;
+        }
     }
 }
 

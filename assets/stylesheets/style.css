@@ -110,7 +110,7 @@ nav .nav-links .capitan {
   line-height: 5.5vw;
   transition: 0.2s;
 }
-.hero-navigate a:hover {
+.hero-navigate a:hover, .hero-navigate .hover {
   color: #31368a;
   font-size: 5vw;
   transition: 0.5s;
@@ -171,13 +171,10 @@ nav .nav-links .capitan {
   width: 100%;
   font: 800 1.5vw/15vw lato, sans-serif;
 }
-.other-activities a:hover, .other-activities .hover {
+.other-activities h2 :hover {
   transition: 0.5s;
   font-size: 1.8vw;
   background-color: #83850baa;
-}
-.other-activities .tiny {
-  font-size: 0.2vw;
 }
 
 .pricing {

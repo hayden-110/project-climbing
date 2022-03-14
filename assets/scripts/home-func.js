@@ -1,25 +1,22 @@
 //hero autoplay
 
 let slideIndex = 0;
+let autoPlay = true;
 const hero = document.querySelector('.hero-navigate');
 const aTags = document.querySelectorAll('.hero-navigate a');
 
-heroAuto();
 
-
-// heroAuto();
 function heroAuto() {
-  // console.log(aTags);
+  // if (e = false){ return; } else if(e == '') {
   for (let i =0; i < aTags.length; i++){
     aTags[i].classList.remove('hover');
-    aTags[i].classList.add('tiny');
-    
-    console.log('for-loop', aTags[i])
+    // hero.addEventListener("mouseover", exit;)
+    // console.log('for-loop', aTags[i])
   }
   slideIndex++;
   if (slideIndex > aTags.length) {slideIndex = 1}
-  aTags[slideIndex-1].classList.add('hover');;
-  setTimeout( heroAuto, 3000);
+  aTags[slideIndex-1].classList.add('hover');
+  setTimeout(heroAuto(), 1800);
 }
 
 // var slideIndex = 0;
