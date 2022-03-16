@@ -1,38 +1,38 @@
 //hero autoplay
 
-let slideIndex = 0;
-let autoPlay = true;
+let slideIndex = 0;     
 const hero = document.querySelector('.hero-navigate');
 const aTags = document.querySelectorAll('.hero-navigate a');
 
+// document.onload =
+// hero.addEventListener('mouseenter', 
+//   console.log('mouseenter'));
 
-function heroAuto() {
-  // if (e = false){ return; } else if(e == '') {
-  for (let i =0; i < aTags.length; i++){
-    aTags[i].classList.remove('hover');
-    // hero.addEventListener("mouseover", exit;)
-    // console.log('for-loop', aTags[i])
+window.onload = showSlides();
+
+hero.onmouseover = function() {
+  console.log('mouseenter');
+  let active = document.querySelector('.active');
+  active.classList.remove("hover");
+};
+
+hero.onmouseleave = function() {
+  console.log('mouseleft')
+    setTimeout(showSlides(), 1800);
+};
+
+function showSlides() {
+  // code removing current hover
+    var i;
+  
+  for (i = 0; i < aTags.length; i++) {
+    aTags[i].classList.remove("hover");
   }
+  //adding hover using slideIndex
   slideIndex++;
   if (slideIndex > aTags.length) {slideIndex = 1}
-  aTags[slideIndex-1].classList.add('hover');
-  setTimeout(heroAuto(), 1800);
-}
-
-// var slideIndex = 0;
-// showSlides();
-
-// function showSlides() {
-//   var i;
-//   var slides = document.getElementsByClassName("mySlides");
-//   for (i = 0; i < slides.length; i++) {
-//     slides[i].style.display = "none";
-//   }
-//   slideIndex++;
-//   if (slideIndex > slides.length) {slideIndex = 1}
-//   slides[slideIndex-1].style.display = "block";
-//   setTimeout(showSlides, 2000); // Change image every 2 seconds
-// } 
+  aTags[slideIndex-1].classList.add('hover')
+} 
 
 // prices tab menu
 document.getElementById("defaultOpen").click();
