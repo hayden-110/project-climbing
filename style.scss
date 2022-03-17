@@ -106,6 +106,7 @@ nav {
         z-index: 1;
         padding: 5vw 0vw 5vw 8vw;
         margin-left: -3vw;
+        width: min-content;
         min-width: 35vw;
         transform: skew(-5deg);
         outline: rgba(123, 16, 0, 0.585) 20px solid;
@@ -124,7 +125,7 @@ nav {
             transition: 0.2s;
 
         }
-        a:hover, .hover {
+        .hover {
             color: #31368a;
             font-size: 5vw;
             transition: 0.5s;
