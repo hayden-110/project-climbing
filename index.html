@@ -29,7 +29,7 @@
         <div class="nav-links">
             <div class="search"><input type="text" placeholder="Search"><button><img src="/assets/img/icons/search.svg" alt="search symbol"></button></div>
             <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop"></a>
-            <a href="" class="capitan"><img src="/assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother"></a>
+            <a href="https://climber.hellocapitan.com/project/login/" class="capitan"><img src="/assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother"></a>
         </div>
     </nav>
 
@@ -248,16 +248,66 @@
 </div>
 
 <div class="centre-details">
-    <div class="opening-times"></div>
+    <div class="centre-details-text">
+        <div class="open-hours">
+            <h4>Opening Times</h4>
+            <p>Mon, Wed & Fri: 10.00-22.00</p>
+            <p>Tue & Thu: 16.00-22.00</p>
+            <p>Sat & Sun: 10.00-20.00</p>
+            <p>Bank Holdidays: 10.00-18.00</p>
+        </div>
+        <div class="directions">
+            <h4>Directions</h4>
+            <p>We are located on the 2nd floor of the Dolphin Centre, above KFC, HMV and the bus station, next to the Libary. We are a 5 minute walk away from the Dolphin Multi-Storey and Seldown car park.</p>
+            <p>We are a 10 minute walk away from the train station.</p>
+        </div>
+    </div>
     <div class="map" id="map"></div>
 </div>
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2526.1055273005295!2d-1.981542984258899!3d50.717981379513176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873a6e9ea7db1d7%3A0xa668d5cd75dbdc88!2sThe%20Project%20Climbing%20Centre!5e0!3m2!1sen!2suk!4v1646921506150!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+
+<div class="contact">
+    <div class="contact-form">
+        <h5 class="contact-form-title">Message Us</h5>
+        <input type="text" name="name" class="contact-form-name" placeholder="Name">
+        <input type="text" name="email" class="contact-form-email" placeholder="Email">
+        <input type="text" name="phone" class="contact-form-phone" placeholder="Phone">
+        <textarea name="message" class="contact-form-message" placeholder="Message"></textarea>
+        <button class="contact-form-button">Send</button>
+    </div>
+    <div class="contact-details">
+        <div class="contact-details-email">
+            <h5 class="contact-details-email-title">Email</h5>
+            <a href="mailto:info@theprojectclimbingcentre.co.uk" class="contact-details-email-address">info@theprojectclimbingcentre.co.uk</a>
+        </div>
+        <div class="contact-details-phone">
+            <h5 class="contact-details-phone-title">Phone</h5>
+            <a href="tel:+44 (0) 1202 660153" class="contact-details-phone-number">+44 (0) 1202 660153</a>
+        </div>
+
+        <div class="contact-details-address">
+            <h5 class="contact-details-address-title">Address</h5>
+        <a href="https://www.google.com/maps/place/The+Project+Climbing+Centre/@50.7179814,-1.981543,17z/data=!3m1!4b1!4m5!3m4!1s0x4873a6e9ea7db1d7:0xa668d5cd75dbdc88!8m2!3d50.7179814!4d-1.9793543"
+        class="contact-details-address-line">
+        The Project Climbing Centre<br>Dolphin Centre<br>Poole<br>BH15 1UD</a>
+        </div>
+
+    </div>
+</div>
+
+
+<footer>
+    <div class="footer-links">
+        <a href="">Contact Us</a>
+        <a href="">Privacy Policy</a>
+        <a href="">Recruitment</a>
+    </div>
+    <div class="socials"></div>
+</footer>
     
     <script src="/assets/scripts/home-func.js"></script>
     <script src="/assets/scripts/map.js"></script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOeSzqsTlvmKdirIjLzEvSUGzByWREGTc&callback=initMap&v=weekly"
-      async
     ></script>
 
 </body>
