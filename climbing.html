@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/stylesheets/climbing.css">
+
+    <!-- adobe font -->
+    <link rel="stylesheet" href="https://use.typekit.net/lux5twu.css">
+
+    <!-- favicon -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets\img\icons\favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets\img\icons\favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets\img\icons\favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets\img\icons\favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets\img\icons\favicon/safari-pinned-tab.svg" color="#0ca2b5">
+    <meta name="msapplication-TileColor" content="#0ca2b5">
+    <meta name="theme-color" content="#0ca2b5">
+
+    <title>The Project - Climbing</title>
+    <meta name="description" content="">
+
+</head>
+
+    
+    <body style="max-width: 100%; background-color: #faf4ee; margin: 0;">
+
+    <nav class="nav">
+        <a class="logo" href="/"><img src="/assets/img/logo+title.svg"
+                alt="The Project with logo which is the outline of a climbing hold with button eyes" class="nav-img"></a>
+
+        <div class="nav-links">
+            <div class="search"><input type="text" placeholder="Search" class="search-box">
+                <button class="search-enter"><img src="/assets/img/icons/search.svg" alt="search symbol" class="search-enter-img"></button>
+            </div>
+            <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop" class="shop-img"></a>
+            <a href="https://climber.hellocapitan.com/project/login/" class="capitan">
+                <img src="/assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother" class="capitan-img"></a>
+        </div>
+
+        <div class="burger-menu" onclick="openMenu()"><img src="/assets/img/icons/burger.svg" alt="hamburger menu"
+                class="burger-menu-image"></div>
+        <div class="mob-menu none">
+            <div class="mob-menu-background"></div>
+            <div class="mob-menu-items">
+                <div class="close" onclick="closeMenu()"><img src="/assets/img/icons/close.svg"
+                        alt="cross to close menu"></div>
+                <a href="" class="nav-climbing">Climbing</a>
+                <a href="" class="nav-yoga">Yoga</a>
+                <a href="" class="nav-info">About</a>
+                <a href="" class="nav-events">Events</a>
+                <a href="" class="nav-blog">Blog</a>
+                <a href="" class="nav-contact">Contact Us</a>
+                <div class="mob-menu-items-bottom">
+                    <a href=""><img src="/assets/img/icons/shop-logo.svg" alt="" class="mob-shop"></a>
+                    <a href="https://climber.hellocapitan.com/project/login/" class="mob-capitan"><img
+                            src="/assets/img/icons/capitan-title.svg" alt="capitan logo" class="mob-capitan-img"></a>
+                    <div class="mob-socials">
+                        <a href=""><img src="/assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
+                        <a href=""><img src="/assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="nav-links-secondary">
+        <div class="nav-links-secondary-links">
+            <a href="" class="nls-a nav-climbing">Climbing</a>
+            <a href="" class="nls-a nav-yoga">Yoga</a>
+            <a href="" class="nls-a nav-info">About</a>
+            <a href="" class="nls-a nav-events">Events</a>
+            <a href="" class="nls-a nav-blog">Blog</a>
+            <a href="" class="nls-a nav-contact">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="beginners">
+        <div class="beginners-intro">
+            <h1 class="beginners-intro-title text-box-title">New To Climbing?</h1>
+            <p class="beginners-intro-text text-box-info">If you are a new to bouldering, you can either come on to one of our inductions or you can go with a friend
+                thats experienced in bouldering.</p>
+        </div>
+
+
+        <div class="beginners-induction">
+            <div class="beginners-induction-text text-box">
+                <h1 class="beginners-induction-title text-box-title">ADULT<br />INDUCTION</h1>
+                <p class="beginners-induction-info text-box-info">Inductions are for adults who are new to bouldering and
+                    would like to use our centre. During our induction you'll learn how to keep yourself and others safe
+                    when climbing.</p>
+                <p class="beginners-induction-price text-box-info">£20 per person<br />Tue - 19:00 - 20:00<br />Sat &
+                    Sun - 14:30 - 15:30
+                </p>
+                <button class="beginners-induction-book text-box-button">Book</button>
+            </div>
+            <div class="beginners-induction-image-overlay"><img src="/assets/img/induction.jpg" alt=""
+                    class="beginners-induction-image text-box-image"></div>
+        </div>
+
+        <div class="beginners-family">
+            <div class="beginners-family-image-overlay"><img src="/assets/img/family.jpg" alt=""
+                    class="beginners-family-image text-box-image"></div>
+            <div class="beginners-family-text text-box">
+                <h1 class="beginners-family-title text-box-title">FAMILY<br />INDUCTION</h1>
+                <p class="beginners-family-info text-box-info">During the school holidays we run inductions for families.</p>
+                <p class="beginners-family-price text-box-info"></p>
+                <button class="beginners-family-book text-box-button">Book</button>
+            </div>
+        </div>
+
+
+        <div class="beginners-supervised">
+            <div class="beginners-supervised-text text-box">
+                <h1 class="beginners-supervised-title text-box-title">CLIMB WITH AN EXPERIENCED FRIEND</h1>
+                <p class="beginners-supervised-info text-box-info">A competent climber can supervise 2 people.
+                    Once a supervised climber has visited 3 times, they are able to register as a unsupervised adult. Our normal prices apply.</p>
+            </div>
+            <div class="beginners-supervised-image-overlay"><img src="/assets/img/induction.jpg" alt=""
+                class="beginners-supervised-image text-box-image"></div>
+        </div>
+    </div>
+
+    <script src="/assets/scripts/nav.js"></script>
+</body>
+
+</html>

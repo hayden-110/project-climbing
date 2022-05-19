@@ -7,83 +7,173 @@ body {
   background-color: #faf4ee;
 }
 
-nav {
+.nav {
   position: absolute;
   top: 0;
   width: 100vw;
   max-width: 100%;
+  min-height: 105px;
   background-image: url("/assets/img/shapes/nav-bg.svg");
   background-size: 102%;
   background-repeat: no-repeat;
   background-position: top;
-  background-position-y: -0.5vw;
+  background-position-y: -2vw;
   display: flex;
   z-index: 2;
-  padding: 1vw 0 1.5vw;
   justify-content: space-between;
 }
-nav .logo {
-  margin-left: 4vw;
+@media (max-width: 1280px) {
+  .nav {
+    background-size: max(108%, 1200px);
+    background-position-y: -1.5vw;
+  }
 }
-nav .logo img {
-  width: 20vw;
+.nav .logo-box {
+  margin: 1vw 4vw 1.5vw;
 }
-nav .nav-links {
+.nav .logo-box .logo-img {
+  width: 15vw;
+  min-width: 215px;
+}
+.nav .nav-links {
   display: flex;
-  margin-right: 4vw;
+  margin-right: 5%;
+  height: 2.5vw;
+  margin-top: 1%;
 }
-nav .nav-links .search {
+@media (max-width: 1080px) {
+  .nav .nav-links {
+    margin-top: 10px;
+  }
+}
+.nav .nav-links .search {
   display: flex;
-  height: 2vw;
+  height: 80%;
+  min-height: 40px;
+  border-radius: 200px;
+  margin-top: 0.5%;
 }
-nav .nav-links .search input {
-  background: none;
+.nav .nav-links .search .search-box {
+  width: 10vw;
+  min-width: 180px;
   background-color: #faf4ee;
-  width: min-content;
   border: none;
-  color: blue;
-  font-size: 0.8vw;
-  text-align: right;
-  border-radius: 40px;
-  padding-right: 20px;
+  font-size: max(1.2vw, 16px);
+  border-radius: 100px 0 0 100px;
+  margin: 0;
+  padding-left: 20px;
 }
-nav .nav-links .search input:focus {
-  outline: #115071 solid 5px;
+.nav .nav-links .search .search-box:focus {
+  outline: none;
 }
-nav .nav-links .search button {
+.nav .nav-links .search .search-enter {
+  border: none;
   background-color: #faf4ee;
-  padding: 0.1vw 0.5vw;
-  margin: 0 1vw 0 0.4vw;
-  border: none;
-  border-radius: 50px;
+  border-radius: 0 100px 100px 0;
+  cursor: pointer;
 }
-nav .nav-links .search button img {
-  height: 1.2vw;
-  width: 1.2vw;
+.nav .nav-links .search .search-enter .search-icon {
+  height: 1.4vw;
+  min-height: 30px;
+  background-color: none;
+  margin: 5px 10px 5px 0;
 }
-nav .nav-links .shop {
-  margin-left: 1.5vw;
+.nav .nav-links .shop {
+  margin: 0 2.5vw 0 2.5vw;
 }
-nav .nav-links .shop img {
-  width: 4vw;
+.nav .nav-links .shop-logo {
+  height: 80%;
+  min-height: 35px;
 }
-nav .nav-links .capitan {
-  margin-left: 2vw;
+.nav .nav-links .capitan-logo {
+  height: 100%;
+  min-height: 40px;
 }
-nav .nav-links .capitan img {
-  width: 2vw;
+.nav .burger-menu, .nav .mob-menu {
+  display: none;
 }
-nav .nav-links .search,
-nav .nav-links .shop,
-nav .nav-links .capitan {
-  margin-top: 0.5vw;
+@media (max-width: 850px) {
+  .nav .nav-links {
+    display: none;
+  }
+  .nav .burger-menu {
+    display: block;
+    margin-right: 5%;
+    height: 2.5vw;
+    margin-top: 2%;
+    padding-top: 10px;
+  }
+  .nav .mob-menu {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+  }
+  .nav .mob-menu-background {
+    background-color: #03062cc0;
+    width: 70vw;
+    height: 100vh;
+  }
+  .nav .mob-menu-items {
+    z-index: 1;
+    position: fixed;
+    width: 30vw;
+    height: 100%;
+    background-color: #1D9B9C;
+    right: 0;
+    padding: 20px 30px;
+  }
+  .nav .mob-menu-items .close {
+    text-align: right;
+    margin-bottom: 2vw;
+  }
+  .nav .mob-menu-items .link {
+    font-family: proxima-nova, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 4.5vw;
+    color: #faf4ee;
+    display: block;
+  }
+  .nav .mob-menu-items-bottom {
+    position: fixed;
+    bottom: 0;
+    margin: 0 20px 20px;
+  }
+}
+.nav .mob-shop {
+  height: 6vw;
+}
+.nav .mob-capitan {
+  align-self: center;
+  height: max-content;
+}
+.nav .mob-capitan-img {
+  height: 6vw;
+}
+.nav .mob-capitan-text {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 4.5vw;
+  color: #faf4ee;
+}
+.nav .mob-socials {
+  display: flex;
+}
+.nav .mob-facebook, .nav .mob-instagram {
+  height: 5vw;
+  margin: 0 1.5vw 0 0;
+}
+
+.none {
+  display: none !important;
 }
 
 .hero {
-  margin: 5vw 0 0 0;
+  margin-top: 4.5vw;
+  padding: -5px;
   display: flex;
   position: relative;
-  max-height: 40vw;
   overflow: hidden;
   width: 100vw;
   max-width: 100%;
@@ -91,45 +181,72 @@ nav .nav-links .capitan {
 .hero-navigate {
   background-image: linear-gradient(150deg, #e35039, #d02207);
   z-index: 1;
-  padding: 5vw 0vw 5vw 8vw;
+  padding: 4% 0 2% 8%;
   margin-left: -3vw;
   width: min-content;
-  min-width: 35vw;
+  min-width: 36%;
   transform: skew(-5deg);
   outline: rgba(123, 16, 0, 0.585) 20px solid;
 }
-.hero-navigate a {
+.hero-navigate .a-link {
   width: min-content;
   display: block;
   color: #fae3df;
   text-decoration: none;
   font-family: lato, sans-serif;
   font-weight: 900;
-  font-size: 4.5vw;
+  font-size: min(4vw, 2500px);
   white-space: nowrap;
   transform: skew(0deg, -6deg);
-  line-height: 5.5vw;
+  line-height: 5vw;
   transition: 0.2s;
 }
+.hero-navigate .under-18 {
+  margin-top: -2%;
+  margin-bottom: -2%;
+}
+.hero-navigate .experienced {
+  margin-top: -2%;
+}
 .hero-navigate .hover {
-  color: #31368a;
-  font-size: 5vw;
+  color: #31358a;
+  font-size: min(4.5vw, 500px);
   transition: 0.5s;
 }
 .hero-carousel {
   position: absolute;
   right: 0;
+  background-color: black;
+  width: 70vw;
 }
-.hero-carousel .hero-photo {
-  width: 65vw;
+.hero .hero-photo {
+  width: 61vw;
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+.hero .active {
+  opacity: 1;
+  z-index: 0;
+  width: 61vw;
+  transition: 0.5s;
+}
+@media (max-width: 1060px) {
+  .hero .hero-navigate {
+    padding-top: 7%;
+  }
 }
 
 .other-activities {
   max-width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
+  scroll-behavior: smooth;
 }
-.other-activities a {
+.other-activities .sub-link {
+  min-width: 210px;
   flex: 1;
   background-size: 200%;
   background-repeat: no-repeat;
@@ -138,7 +255,7 @@ nav .nav-links .capitan {
   box-shadow: inset 0 0 10px #5f5f5f;
   transition: 0.2s;
 }
-.other-activities a:hover {
+.other-activities .sub-link:hover {
   transition: 0.35s;
   background-size: 180%;
 }
@@ -163,31 +280,63 @@ nav .nav-links .capitan {
 .other-activities .coworking {
   background-image: url("/assets/img/coworking.jpeg");
 }
-.other-activities h2 {
+.other-activities .studio {
+  background-image: url("/assets/img/studio.jpeg");
+}
+.other-activities .sub-title {
   transition: 0.2s;
   margin: auto;
   text-align: center;
+  overflow-wrap: break-word;
   color: #fae3df;
   background-color: #318a668c;
   width: 100%;
-  font: 800 1.5vw/15vw lato, sans-serif;
+  font: 800 max(1.5vw, 15px)/max(13vw, 110px) lato, sans-serif;
 }
-.other-activities h2 :hover {
+.other-activities .sub-title :hover {
   transition: 0.5s;
   font-size: 1.8vw;
   background-color: #83850baa;
 }
+.other-activities .left, .other-activities .right {
+  position: absolute;
+  width: 8vw;
+  height: max(13vw, 110px);
+  border-radius: 0;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  font-family: soleil, sans-serif;
+  font-size: 3vw;
+  font-weight: 700;
+}
+.other-activities .left-arr, .other-activities .right-arr {
+  height: 40px;
+  color: #fad51b;
+  cursor: pointer;
+}
+.other-activities .left {
+  left: 0;
+  padding-right: 2vw;
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), rgba(35, 35, 35, 0.636));
+}
+.other-activities .right {
+  right: 0;
+  padding-left: 2vw;
+  background-image: linear-gradient(270deg, rgba(35, 35, 35, 0.636), rgba(0, 0, 0, 0));
+}
 
 .pricing {
-  margin: 5vw;
+  margin: 2% auto;
+  width: clamp(60px, 80%, 2030px);
   box-shadow: 1vw 1vw 2vw rgba(49, 49, 49, 0.377);
 }
 .pricing .tab {
   overflow: hidden;
   background-color: #8BBAFF;
 }
-.pricing .tab button {
-  font: 500 2vw soleil, sans-serif;
+.pricing .tab-links {
+  font: 500 clamp(20px, 2vw, 48px) soleil, sans-serif;
   color: #F3F3F3;
   float: left;
   border: none;
@@ -196,16 +345,16 @@ nav .nav-links .capitan {
   padding: 1vw 2vw;
   transition: 0.3s;
 }
-.pricing .tab button:hover {
+.pricing .tab-links:hover {
   background-color: #0f3e85;
 }
-.pricing button:nth-child(1), .pricing .pricing-block:nth-child(1) {
+.pricing .tab-links:nth-child(1), .pricing .pricing-block:nth-child(1) {
   background-color: #1450AA;
 }
-.pricing button:nth-child(2), .pricing .pricing-block:nth-child(2) {
+.pricing .tab-links:nth-child(2), .pricing .pricing-block:nth-child(2) {
   background-color: #1D74F7;
 }
-.pricing button:nth-child(3), .pricing .pricing-block:nth-child(3) {
+.pricing .tab-links:nth-child(3), .pricing .pricing-block:nth-child(3) {
   background-color: #3183ff;
 }
 .pricing .pricing-block {
@@ -213,9 +362,9 @@ nav .nav-links .capitan {
   padding-top: 2vw;
   border-top: none;
 }
-.pricing .pricing-block h3, .pricing .pricing-block p, .pricing .pricing-block li {
+.pricing .pricing-block .pricing-h3, .pricing .pricing-block .price-desc, .pricing .pricing-block .small-print, .pricing .pricing-block .pricing-li {
   color: #F3F3F3;
-  font: 500 1.8vw soleil, sans-serif;
+  font: 500 clamp(16px, 1.8vw, 40px) soleil, sans-serif;
   padding: 0.6vw;
 }
 .pricing .pricing-block .pricing-flex {
@@ -239,8 +388,8 @@ nav .nav-links .capitan {
   display: flex;
   justify-content: space-between;
 }
-.pricing .pricing-block li {
-  font-size: 1.3vw;
+.pricing .pricing-block .pricing-li {
+  font-size: clamp(14px, 1.4vw, 18px);
 }
 .pricing .pricing-block .price-plus {
   background-color: #115071 !important;
@@ -252,7 +401,7 @@ nav .nav-links .capitan {
 .pricing .pricing-block .price-row {
   margin: 0;
 }
-.pricing .pricing-block .price-row h3 {
+.pricing .pricing-block .price-row .pricing-h3 {
   text-align: center;
   font-size: 2vw;
 }
@@ -263,29 +412,27 @@ nav .nav-links .capitan {
 .centre-details-text {
   flex: 1;
   background-color: #8BC6EC;
-  background-image: linear-gradient(10deg, #1fd4cb 0%, #c383f7 100%);
+  background-image: linear-gradient(210deg, #1fd4cb 0%, #83f5f7 100%);
   padding: 3vw;
 }
-.centre-details-text h4, .centre-details-text p {
+.centre-details-text .centre-details-title, .centre-details-text .centre-details-p {
   color: rgba(61, 3, 109, 0.713);
-  font: 600 4vw lato, sans-serif;
+  font-family: lato, sans-serif;
 }
-.centre-details-text h4 {
+.centre-details-text .centre-details-title {
   margin-bottom: 1.5vw;
+  font-size: clamp(30px, 4vw, 60px);
 }
-.centre-details-text p {
-  font-size: 2vw;
+.centre-details-text .centre-details-p {
+  font-size: clamp(16px, 2vw, 40px);
+  font-weight: 500;
 }
 .centre-details-text .directions {
   margin-top: 3vw;
 }
-.centre-details-text .directions p {
-  font-size: 1.6vw;
-}
 .centre-details .map {
   flex: 1;
   width: 50vw;
-  height: 50vw;
 }
 
 .contact {
@@ -301,20 +448,19 @@ nav .nav-links .capitan {
   z-index: 1;
 }
 .contact-form-title {
-  font: 600 3.5vw soleil, sans-serif;
+  font: 600 clamp(34px, 3.5vw, 80px) soleil, sans-serif;
   color: #030b64;
   width: fit-content;
 }
 .contact-form-name, .contact-form-email, .contact-form-phone, .contact-form-message {
   display: block;
   margin: 15px 0;
-  height: 2vw;
   width: 25vw;
   border: none;
   border-radius: 0.5vw;
-  font-size: 1.4vw;
+  font-size: clamp(16px, 1.4vw, 30px);
   font-family: soleil, sans-serif;
-  padding: 0.5vw;
+  padding: 0.5% 1.5%;
   box-shadow: 5px 5px 0.5vw rgba(0, 0, 0, 0.197);
 }
 .contact-form-name {
@@ -324,13 +470,13 @@ nav .nav-links .capitan {
   width: 35vw;
   height: 20vw;
   resize: none;
-  font-size: 1.6vw;
+  font-size: clamp(16px, 1.4vw, 30px);
 }
 .contact-form-button {
-  padding: 0.5vw 2.5vw;
+  padding: 0.5vw 1.5vw;
   border: none;
-  border-radius: 2vw;
-  font: 800 2vw soleil, sans-serif;
+  border-radius: 2.5vw;
+  font: 800 clamp(20px, 2vw, 30px) soleil, sans-serif;
   background-image: linear-gradient(60deg, #fff70f, #ffd000);
   color: #0c1dd4;
   box-shadow: 5px 5px 0.5vw rgba(0, 0, 0, 0.197);
@@ -339,11 +485,11 @@ nav .nav-links .capitan {
   padding: 5vw 2vw;
 }
 .contact-details-email-title, .contact-details-phone-title, .contact-details-address-title {
-  font: 900 3.5vw soleil, sans-serif;
+  font: 900 clamp(28px, 3.5vw, 50px) soleil, sans-serif;
   color: #f7f7f7;
 }
 .contact-details-email-address, .contact-details-phone-number, .contact-details-address-line {
-  font: 600 2vw soleil, sans-serif;
+  font: 600 clamp(20px, 2vw, 40px) soleil, sans-serif;
   text-decoration: none;
   color: #6eeee8;
 }
@@ -362,11 +508,11 @@ nav .nav-links .capitan {
   display: flex;
 }
 
-footer {
+.footer {
   background-color: #0a0961;
   padding: 1vw 5vw;
 }
-footer a {
+.footer .footer-a {
   color: white;
   text-decoration: none;
   display: block;

@@ -9,133 +9,266 @@ body {
     background-color: #faf4ee;
 }
 
-nav {
+.nav {
     position: absolute;
     top: 0;
     width: 100vw;
     max-width: 100%;
+    min-height: 105px;
     background-image: url("/assets/img/shapes/nav-bg.svg");
     background-size: 102%;
     background-repeat: no-repeat;
     background-position: top;
-    background-position-y: -0.5vw;
+    background-position-y: -2vw;
     display: flex;
     z-index: 2;
-
-    padding: 1vw 0 1.5vw;
     justify-content: space-between;
 
-    .logo {
-        margin-left: 4vw;
-        img {
-            width: 20vw;
+    @media (max-width: 1280px) {
+            background-size: max(108%, 1200px);
+            background-position-y: -1.5vw;
+        }
+    .logo-box {
+        margin: 1vw 4vw 1.5vw;
+        .logo-img {
+            width: 15vw;
+            min-width: 215px;
         }
     }
 
     .nav-links {
         display: flex;
-        margin-right: 4vw;
+        margin-right: 5%;
+        height: 2.5vw;
+        // justify-content: space-between;
+        margin-top: 1%;
+    @media (max-width: 1080px) {
+        margin-top: 10px;
+    }
+
         .search {
             display: flex;
-            height: 2vw;
+            height: 80%;
+            min-height: 40px;
+            border-radius: 200px;
+            margin-top: .5%;
 
-            input {
-                background: none;
+            .search-box {
+                width: 10vw;
+                min-width: 180px;
                 background-color: #faf4ee;
-                // height: 2vw;
-                width: min-content;
                 border: none;
-                color: blue;
-                font-size: 0.8vw;
-                text-align: right;
-                border-radius: 40px;
-                padding-right: 20px;
+                font-size: max(1.2vw, 16px);
+                border-radius: 100px 0 0 100px;
+                margin: 0;
+                padding-left: 20px;
                 &:focus {
-                    outline: #115071 solid 5px;
+                    outline: none;
                 }
             }
 
-            button {
-                background-color: #faf4ee;
-                padding: 0.1vw 0.5vw;
-                // height: min-content;
-                margin: 0 1vw 0 0.4vw;
+            .search-enter {
                 border: none;
-                border-radius: 50px;
-                img {
-                    height: 1.2vw;
-                    width: 1.2vw;
+                background-color: #faf4ee;
+                border-radius: 0 100px 100px 0;
+                cursor: pointer;
+                .search-icon {
+                    height: 1.4vw;
+                    min-height: 30px;
+                    background-color: none;
+                    margin: 5px 10px 5px 0;
                 }
             }
         }
 
         .shop {
-            margin-left: 1.5vw;
-
-            img {
-                width: 4vw;
+            margin: 0 2.5vw 0 2.5vw;
+            &-logo {
+                height: 80%;
+                min-height: 35px;
             }
         }
 
         .capitan {
-            margin-left: 2vw;
-            img {
-                width: 2vw;
+            &-logo {
+                height: 100%;
+                min-height: 40px;
+            }
+        }
+            
+    }
+    .burger-menu, .mob-menu {
+        display: none;
+    }
+
+    @media (max-width: 850px) {
+        .nav-links {
+            display: none;
+        }
+
+        .burger-menu {
+            display: block;
+            // width: 2vw;
+            margin-right: 5%;
+        height: 2.5vw;
+        // justify-content: space-between;
+        margin-top: 2%;
+        padding-top: 10px;
+        }
+
+        .mob-menu{
+            position: absolute;
+            display: flex;
+            height: 100vh;
+            // background-color: #131D47;
+
+            &-background {
+                background-color: #03062cc0;
+                width: 70vw;
+                height: 100vh;
+            }
+            
+            &-items {
+                z-index: 1;
+                position: fixed;
+                width: 30vw;
+                height: 100%;
+                background-color: #1D9B9C;
+                right: 0;
+                padding: 20px 30px;
+                .close {
+                    text-align: right;
+                    margin-bottom: 2vw;
+                }
+                .link {
+                    font-family: proxima-nova, sans-serif;
+                    font-weight: 500;
+                    text-decoration: none;
+                    font-size: 4.5vw;
+                    color: #faf4ee;
+                    display: block;
+                }
+                &-bottom {
+                    position: fixed;
+                    bottom: 0;
+                    margin: 0 20px 20px;
+
+                }
             }
         }
 
-        .search,
-        .shop,
-        .capitan {
-            // width: min-content;
-            margin-top: 0.5vw;
+    }
+    .mob-shop {
+        height: 6vw;
+    }
+    .mob-capitan {
+        align-self: center;
+        height: max-content;
+        &-img {
+            height: 6vw;
         }
+        &-text {
+                    font-family: proxima-nova, sans-serif;
+                    font-weight: 500;
+                    text-decoration: none;
+                    font-size: 4.5vw;
+                    color: #faf4ee;
+        }
+    }
+    
+    .mob-socials {
+        display: flex;
+        
+    }
+    .mob-facebook, .mob-instagram {
+        height: 5vw;
+        margin: 0 1.5vw 0 0;
     }
 }
 
+.none {
+    display: none !important;
+}
+
+
+
 .hero {
-    margin: 5vw 0 0 0;
+    margin-top: 4.5vw;
+    padding: -5px;
     display: flex;
     position: relative;
-    max-height: 40vw;
     overflow: hidden;
     width: 100vw;
     max-width: 100%;
     &-navigate {
         background-image: linear-gradient(150deg, rgb(227, 80, 57), rgb(208, 34, 7));
         z-index: 1;
-        padding: 5vw 0vw 5vw 8vw;
+        padding: 4% 0 2% 8%;
         margin-left: -3vw;
         width: min-content;
-        min-width: 35vw;
+        min-width: 36%;
         transform: skew(-5deg);
         outline: rgba(123, 16, 0, 0.585) 20px solid;
-
-        a {
+        
+        .a-link {
             width: min-content;
             display: block;
             color: #fae3df;
             text-decoration: none;
             font-family: lato, sans-serif;
             font-weight: 900;
-            font-size: 4.5vw;
+            font-size: min(4vw, 2500px);
             white-space: nowrap;
             transform: skew(0deg, -6deg);
-            line-height: 5.5vw;
+            line-height: 5vw;
             transition: 0.2s;
-
         }
+
+        .under-18 {
+            margin-top: -2%;
+            margin-bottom: -2%;
+        }
+
+        .experienced{
+            margin-top: -2%;
+        }
+
         .hover {
-            color: #31368a;
-            font-size: 5vw;
+            color: #31358a;
+            font-size: min(4.5vw, 500px);
             transition: 0.5s;
         }
     }
     &-carousel {
         position: absolute;
         right: 0;
+        background-color: rgb(0, 0, 0);
+        width: 70vw;
+
+    }
         .hero-photo {
-            width: 65vw;
+            width: 61vw;
+            position: absolute;
+            right: 0;
+            opacity: 0;
+            // display: none;
+            z-index: -1;
+            transition: 0.5s;
+            
+        }
+
+        .active {
+            opacity: 1;
+            // display: block;
+            z-index: 0;
+            width: 61vw;
+
+            transition: 0.5s;
+        }
+    
+    @media (max-width: 1060px){
+        .hero-navigate{
+            padding-top: 7%;
         }
     }
 }
@@ -145,9 +278,14 @@ nav {
     max-width: 100%;
     display: flex;
     // align-items: center;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    // overflow-y: hidden;
 
-    a {
+
+    .sub-link {
+        min-width: 210px;
         flex: 1;
         background-size: 200%;
         background-repeat: no-repeat;
@@ -187,36 +325,71 @@ nav {
     .coworking {
         background-image: url("/assets/img/coworking.jpeg");
     }
+    .studio {
+        background-image: url("/assets/img/studio.jpeg");
+    }
 
-    h2 {
+    .sub-title {
         transition: 0.2s;
         margin: auto;
         text-align: center;
+        overflow-wrap: break-word;
         // font-family: sans-serif;
         color: #fae3df;
         background-color: #318a668c;
         width: 100%;
         // line-height: 15vw;
         // font-size: 1.5vw;
-        font: 800 1.5vw/15vw lato, sans-serif;
+        font: 800 max(1.5vw, 15px)/max(13vw, 110px) lato, sans-serif;
         :hover {
             transition: 0.5s;
             font-size: 1.8vw;
             background-color: #83850baa;
         }
     }
+    .left, .right {
+        position: absolute;
+        width: 8vw;
+        height: max(13vw, 110px);
+        border-radius: 0;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        font-family: soleil, sans-serif;
+        font-size: 3vw;
+        font-weight: 700;
+        &-arr {
+            height: 40px;
+            color: rgb(250, 213, 27);
+            cursor: pointer;
+        }
+    }
+
+    .left {
+        left: 0;
+        padding-right: 2vw;
+        background-image: linear-gradient(270deg,  rgba(0, 0, 0, 0), rgba(35, 35, 35, 0.636),);
+    }
+
+    .right {
+        right: 0;
+        padding-left: 2vw;
+        background-image: linear-gradient(270deg, rgba(35, 35, 35, 0.636), rgba(0, 0, 0, 0));
+    }
+
 }
 
 .pricing {
     // height: 2vw;
-    margin: 5vw;
-    
+    margin: 2% auto;
+    width: clamp(60px, 80%, 2030px);
+    // margin: auto 0;
     box-shadow: 1vw 1vw 2vw rgba(49, 49, 49, 0.377);
     .tab {
         overflow: hidden;
         background-color: #8BBAFF;
-        button {
-            font: 500 2vw soleil, sans-serif;
+        &-links {
+            font: 500 clamp(20px, 2vw, 48px) soleil, sans-serif;
             color: #F3F3F3;
             float: left;
             border: none;
@@ -230,7 +403,7 @@ nav {
         }
     }
 
-    button, .pricing-block {
+    .tab-links, .pricing-block {
         &:nth-child(1){
             background-color: #1450AA;
         }
@@ -249,9 +422,9 @@ nav {
         display: none;
         padding-top: 2vw;
         border-top: none;
-        h3, p, li {
+        .pricing-h3, .price-desc, .small-print, .pricing-li {
             color: #F3F3F3;
-            font: 500 1.8vw soleil, sans-serif;
+            font: 500 clamp(16px, 1.8vw, 40px) soleil, sans-serif;
             padding: .6vw;
         }
 
@@ -286,8 +459,8 @@ nav {
             justify-content: space-between;
         }
 
-        li {
-            font-size: 1.3vw;
+        .pricing-li {
+            font-size: clamp(14px, 1.4vw, 18px);
         }
         
         .price-plus {
@@ -299,7 +472,7 @@ nav {
         }
         .price-row {
             margin: 0;
-            h3 {
+            .pricing-h3 {
             text-align: center;
             font-size: 2vw;
             // padding: 1vw;
@@ -313,31 +486,35 @@ nav {
     &-text {
         flex: 1;
         background-color: #8BC6EC;
-        background-image: linear-gradient(10deg, #1fd4cb 0%, #c383f7 100%);
+        background-image: linear-gradient(210deg, #1fd4cb 0%, #83f5f7 100%);
         padding: 3vw;
-        h4, p {
+        .centre-details-title, .centre-details-p {
             color: rgba(61, 3, 109, 0.713);
-            font: 600 4vw lato, sans-serif;
+            font-family: lato, sans-serif;
+            // font-weight: 600;
         }
-        h4 {
+        .centre-details-title {
             margin-bottom: 1.5vw;
+            font-size: clamp(30px, 4vw, 60px);
         }
-        p {
-            font-size: 2vw;
+        .centre-details-p {
+            font-size: clamp(16px, 2vw, 40px);
+            font-weight: 500;
+            // font-size: ;
         }
 
         .directions {
             margin-top: 3vw;
-            p {
-                font-size: 1.6vw;
-            }
+            // p {
+            //     font-size: clamp(30px, 4vw, 60px);
+            // }
         }
     }
     .map {
 
         flex: 1;
         width: 50vw;
-        height: 50vw;
+        // height: auto;
     }
 }
 
@@ -353,7 +530,7 @@ nav {
         display: block;
         z-index: 1;
         &-title{
-            font: 600 3.5vw soleil, sans-serif;
+            font: 600 clamp(34px, 3.5vw, 80px) soleil, sans-serif;
             color: #030b64;
             // transform: skewY(-2deg);
             // padding: 0 8px;
@@ -362,13 +539,13 @@ nav {
         &-name, &-email, &-phone, &-message {
             display: block;
             margin: 15px 0;
-            height: 2vw;
+            // height: 2vw;
             width: 25vw;
             border: none;
             border-radius: .5vw;
-            font-size: 1.4vw;
+            font-size: clamp(16px, 1.4vw, 30px);
             font-family: soleil, sans-serif;
-            padding: .5vw;
+            padding: .5% 1.5%;
             box-shadow: 5px 5px 0.5vw rgba(0, 0, 0, 0.197);
         }
         &-name{
@@ -378,13 +555,13 @@ nav {
             width: 35vw;
             height: 20vw;
             resize: none;
-            font-size: 1.6vw;
+            font-size: clamp(16px, 1.4vw, 30px);
         }
         &-button {
-            padding: .5vw 2.5vw;
+            padding: .5vw 1.5vw;
             border: none;
-            border-radius: 2vw;
-            font: 800 2vw soleil, sans-serif;
+            border-radius: 2.5vw;
+            font: 800 clamp(20px, 2vw, 30px) soleil, sans-serif;
             background-image: linear-gradient(60deg, rgb(255, 247, 15), rgb(255, 208, 0));
             color: #0c1dd4;
             box-shadow: 5px 5px 0.5vw rgba(0, 0, 0, 0.197);
@@ -396,11 +573,11 @@ nav {
         // background-color: #1fd4cb;
         padding: 5vw 2vw;
         &-email-title, &-phone-title, &-address-title{
-            font: 900 3.5vw soleil, sans-serif;
+            font: 900 clamp(28px, 3.5vw, 50px) soleil, sans-serif;
             color: rgb(247, 247, 247);
         }
         &-email-address, &-phone-number, &-address-line{
-            font: 600 2vw soleil, sans-serif;
+            font: 600 clamp(20px, 2vw, 40px) soleil, sans-serif;
             // margin-left: 1vw;
             text-decoration: none;
             color: #6eeee8;
@@ -423,11 +600,11 @@ nav {
     }
 }
 
-footer {
+.footer {
     // height: 10vw;
     background-color: #0a0961;
     padding: 1vw 5vw;
-    a {
+    .footer-a {
         color: white;
         text-decoration: none;
         display: block;

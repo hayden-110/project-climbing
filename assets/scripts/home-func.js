@@ -3,8 +3,8 @@
 let slideIndex = 0;     
 const hero = document.querySelector('.hero-navigate');
 const aTags = document.querySelectorAll('.hero-navigate a');
+const heroImg = document.querySelectorAll('.hero-photo');
 
-// maybe put this in an interval?
 
 document.addEventListener('DOMContentLoaded', function(){
 
@@ -13,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function(){
       active.classList.remove("hover");
       e.classList.add("hover");
       slideIndex = Array.prototype.indexOf.call(e.parentNode.children, e);
-      // slideIndex = e.parentNode;
+      const activeImg = document.querySelector('.active');
+      activeImg.classList.remove("active");
+      heroImg[slideIndex].classList.add('active');
   }))
   setInterval(
 
@@ -21,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function(){
       showSlides();
     }, 1800
   )
+
+  
+
 
 })
 
@@ -32,18 +37,53 @@ function showSlides() {
   
   for (i = 0; i < aTags.length; i++) {
     aTags[i].classList.remove("hover");
+    heroImg[i].classList.remove("active");
   }
   //adding hover using slideIndex
   slideIndex++;
   if (slideIndex > aTags.length) {slideIndex = 1};
   aTags[slideIndex-1].classList.add('hover');
+  heroImg[slideIndex-1].classList.add('active');
 }
 
+
+const activities = document.querySelector('.other-activities');
+const leftButton = document.querySelector('#slide-left')
+const rightButton = document.querySelector('#slide-right')
+
+function scrollActivities(dir) {
+  dir === 'right' ? activities.scrollLeft += 600 : activities.scrollLeft -= 600;
+  setInterval(() => {
+    if(activities.scrollLeft == 0){
+      leftButton.classList.add('none')
+      rightButton.classList.remove('none')
+    } else if (activities.scrollLeft == activities.scrollLeftMax) {
+      leftButton.classList.remove('none')
+      rightButton.classList.add('none')
+    } else {
+      leftButton.classList.remove('none')
+      rightButton.classList.remove('none')
+      }
+
+      if(activities.scrollLeftMax == 0){
+        leftButton.classList.add('none')
+        rightButton.classList.add('none')
+      }
+  }, 0);
+}
+
+if(activities.scrollLeftMax == 0){
+  rightButton.classList.add('none')
+}
+
+// if(activities.scrollLeft == 0){
+//   leftButton.classList.add('none')
+// } else {leftButton.classList == 'left'}
 
 // prices tab menu
 document.getElementById("defaultOpen").click();
 
-function openCity(evt, cityName) {
+function openPrice(evt, tabName) {
     // Declare all variables
     var i, pricingBlock, tablinks;
   
@@ -60,6 +100,6 @@ function openCity(evt, cityName) {
     }
   
     // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
   }

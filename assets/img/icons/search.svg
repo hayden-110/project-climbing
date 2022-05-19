@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 22"><defs><style>.cls-1{fill:#1a78aa;}.cls-2{fill:none;stroke:#1a78aa;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M12.5,2A6.5,6.5,0,1,1,6,8.5,6.5074,6.5074,0,0,1,12.5,2m0-2A8.5,8.5,0,1,0,21,8.5,8.5,8.5,0,0,0,12.5,0Z"/><line class="cls-2" x1="7" y1="15" x2="1" y2="21"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="33.828" height="34.828" viewBox="0 0 33.828 34.828">
+  <g id="Group_45" data-name="Group 45" transform="translate(-2807 -2366)">
+    <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(2807 2366)" fill="none" stroke="#1a78aa" stroke-width="4">
+      <circle cx="14" cy="14" r="14" stroke="none"/>
+      <circle cx="14" cy="14" r="12" fill="none"/>
+    </g>
+    <line id="Line_6" data-name="Line 6" x2="8" y2="8" transform="translate(2830 2390)" fill="none" stroke="#1a78aa" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+  </g>
+</svg>
