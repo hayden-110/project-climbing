@@ -309,12 +309,48 @@
 
 
 
+<<<<<<< HEAD
     .beginners-intro {
         background-image: linear-gradient(45deg, #2b71e1, #2985dc);
         // background-image: linear-gradient(45deg, #f27d29, #ea7610);
 
         padding: 2%  5%;
         border-radius: 2vw 2vw 0 0;
+=======
+    .text-box {
+        padding: 10px 5% 0;
+        width: 60%;
+        
+        
+        &-title {
+            // margin-bottom: 15px;
+            @include lato;
+            line-height: 4vw;
+            color: #f3f3f3;
+        }
+        
+        &-info {
+            @include soleil;
+            margin-bottom: 10px;
+            color: #f3f3f3;
+        }
+
+        &-button {
+            padding: 5px 30px;
+            border: none;
+            border-radius: 50px;
+            @include soleil;
+            
+            margin-top: 10px;
+        }
+        
+        &-image {
+            opacity: 90%;
+            // width: 100%;
+            // height: 100%;
+        }
+    }
+>>>>>>> e3c6ad05f8df01c927ce8fa7216bd32c710961d6
 
         &-text {
             width: 80%;
@@ -327,6 +363,7 @@
  
         
         &-text {
+<<<<<<< HEAD
             background-image: linear-gradient(45deg, #0e9acd, #2693c2);
         }
 
@@ -334,6 +371,9 @@
         &-price {
             color: #F3F3F3;
 
+=======
+            background-image: linear-gradient(45deg, #E35039, #D52F15);
+>>>>>>> e3c6ad05f8df01c927ce8fa7216bd32c710961d6
         }
 
         &-book {
@@ -350,9 +390,6 @@
         }
 
         &-image {
-            height: 100%;
-            // width: 30vw;
-            // min-width: 260px;
             float: right;
         }
     }
