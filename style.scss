@@ -222,16 +222,18 @@ body {
             transform: skew(0deg, -6deg);
             line-height: 5vw;
             transition: 0.2s;
+            margin-top: -1%;
+            margin-bottom: -1%;
         }
 
-        .under-18 {
-            margin-top: -2%;
-            margin-bottom: -2%;
-        }
+        // .under-18 {
+        //     margin-top: -2%;
+        //     margin-bottom: -2%;
+        // }
 
-        .experienced{
-            margin-top: -2%;
-        }
+        // .experienced{
+        //     margin-top: -2%;
+        // }
 
         .hover {
             color: #31358a;
