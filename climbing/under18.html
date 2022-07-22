@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../assets/stylesheets/frame.css">
+    <link rel="stylesheet" href="../assets/stylesheets/climbing.css">
+    <!-- adobe font -->
+    <link rel="stylesheet" href="https://use.typekit.net/lux5twu.css">
+
+    <!-- favicon -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets\img\icons\favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets\img\icons\favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets\img\icons\favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets\img\icons\favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets\img\icons\favicon/safari-pinned-tab.svg" color="#0ca2b5">
+    <meta name="msapplication-TileColor" content="#0ca2b5">
+    <meta name="theme-color" content="#0ca2b5">
+
+    <title>The Project - Beginners</title>
+    <meta name="description" content="A climbing centre in poole">
+</head>
+
+<nav class="nav">
+    <a class="logo" href="/"><img src="../assets/img/logo+title.svg"
+            alt="The Project with logo which is the outline of a climbing hold with button eyes" class="nav-img"></a>
+
+    <div class="nav-links">
+        <!-- <div class="search"><input type="text" placeholder="Search" class="search-box">
+            <button class="search-enter"><img src="/assets/img/icons/search.svg" alt="search symbol" class="search-enter-img"></button>
+        </div> -->
+        <!-- <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop" class="shop-img"></a> -->
+        <a href="https://climber.hellocapitan.com/project/login/" class="capitan">
+            <img src="../assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother"
+                class="capitan-img"></a>
+    </div>
+
+    <div class="burger-menu" onclick="openMenu()"><img src="../assets/img/icons/burger.svg" alt="hamburger menu"
+            class="burger-menu-image"></div>
+    <div class="mob-menu none">
+        <div class="mob-menu-background"></div>
+        <div class="mob-menu-items">
+            <div class="close" onclick="closeMenu()"><img src="../assets/img/icons/close.svg" alt="cross to close menu">
+            </div>
+            <div class="mob-menu-droplist">
+                <div class="mob-menu-droplist-par" onclick="subMenu(mobClimbing, climbingArr)">
+                    <div class="mob-menu-droplist-head">Climbing</div><img src="../assets/img/icons/mob-menu-arr.svg"
+                        alt="arrow" class="mob-menu-droplist-arr" id="climbing-arr">
+                </div>
+                <ul class=" mob-menu-droplist-items droplist-climbing none">
+                    <a href="../climbing/beginners.html">Beginners</a>
+                    <a href="../climbing/experienced.html">Experienced</a>
+                    <a href="../climbing/under-18.html">Under 18's</a>
+                    <a href="../climbing/classes.html" class="dropdown-item">Classes</a>
+                    <a href="../climbing/groups.html">Groups</a>
+                </ul>
+            </div>
+            <a href="../yoga.html" class="nav-yoga">Yoga</a>
+            <div class="mob-menu-droplist">
+                <div class="mob-menu-droplist-par" onclick="subMenu(mobAbout, aboutArr)">
+                    <div class="mob-menu-droplist-head">About</div><img src="../assets/img/icons/mob-menu-arr.svg"
+                        alt="arrow" class="mob-menu-droplist-arr" id="about-arr">
+                </div>
+                <ul class=" mob-menu-droplist-items droplist-about none">
+                    <a href="../pricing.html">Prices & Opening Hours</a>
+                    <a href="../pricing.html">Facilities</a>
+                    <a href="../studio-hire.html">Studio Hire</a>
+                </ul>
+            </div>
+            <!-- <a href="/events.html" class="nav-events">Events</a>
+            <a href="/blog.html" class="nav-blog">Blog</a> -->
+            <a href="../contact.html" class="nav-contact">Contact Us</a>
+            <div class="mob-menu-items-bottom">
+                <!-- <a href=""><img src="/assets/img/icons/shop-logo.svg" alt="" class="mob-shop"></a> -->
+                <a href="https://climber.hellocapitan.com/project/login/" class="mob-capitan"><img
+                        src="../assets/img/icons/capitan-title.svg" alt="capitan logo" class="mob-capitan-img"></a>
+                <div class="mob-socials">
+                    <a href="https://www.facebook.com/TheProjectClimbingCentre"><img
+                            src="../assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
+                    <a href="https://www.instagram.com/theprojectclimbingcentre/?hl=en"><img
+                            src="../assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="nav-links-secondary">
+    <div class="nav-links-secondary-links">
+        <div class="dropdown">
+            <div class="nls-a nav-climbing">Climbing</div>
+            <ul class="dropdown-box">
+                <a href="../climbing/beginners.html" class="dropdown-item">Beginners</a>
+                <a href="../climbing/experienced.html" class="dropdown-item">Experienced</a>
+                <a href="../climbing/under-18.html" class="dropdown-item">Under 18's</a>
+                <a href="../climbing/classes.html" class="dropdown-item">Classes</a>
+                <a href="../climbing/groups.html" class="dropdown-item">Groups</a>
+            </ul>
+        </div>
+        <a href="../yoga.html" class="nls-a nav-yoga">Yoga</a>
+        <div class="dropdown">
+            <div class="nls-a nav-about">About</div>
+            <ul class="dropdown-box">
+                <a href="about" class="dropdown-item">Prices & Opening Hours</a>
+                <a href="" class="dropdown-item">Facilities</a>
+                <a href="../about/studio.html" class="dropdown-item">Studio Hire</a>
+            </ul>
+        </div>
+        <a href="" class="nls-a nav-contact">Contact Us</a>
+    </div>
+</div>
+
+<div class="under18 text-box-par">
+    <div class="under18-intro text-box">
+        <h1 class="text-box-title">UNDER 18'S</h1>
+        <p class="text-box-info">
+            Children from the age of 4 can climb. An adult can bring 2 children if they are registered with us, have
+            previous bouldering experience, and can safe supervise their child. Our instructed sessions start at the age
+            of 7 and up, look at the junior sessions we offer.
+        </p>
+    </div>
+    <div class="under18-casual text-box">
+        <h1 class="text-box-title">JUNIOR CASUAL SESSION</h1>
+        <h2 class="text-box-sub">Ages 7-13 • Suited for Beginners • 1 Hour • £12 • 1-6 Climbers</h2>
+        <p class="text-box-info">
+            Junior Casual Sessions are. During the session the group will play some warm up games and exercises, they'll
+            take part in a safety briefing before they climb. The Instructor will then supervise them climbing. We run
+            these sessions on weekends and in the holidays. Due to the session being short, it is important that you
+            arrive to the centre on time. There are places for the parents/carers to spectate, however they won't be
+            allowed in the climbing area.
+        </p>
+
+        <a class="under18-casual-book text-box-button"
+            href="https://climber.hellocapitan.com/project/schedule/gym/11/86/num-participants/">Book</a>
+    </div>
+    <div class="under18-club text-box">
+        <h1 class="text-box-title">JUNIOR NIBAS CLUB</h1>
+        <h2 class="text-box-sub">Ages 7-17 • All Abilities Welcome • 1-8 Climbers</h2>
+        <p class="text-box-info">
+            Junior Clubs follow the NICAS Bouldering scheme, it has 5 levels which take young climbers from beginners to
+            young athletes. They run alongside the school's half terms. The sessions are 1 1/2 sessions long which run
+            in the evenings. See the calendar for pricing, as it depends on the length of the half term.
+        </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjngaW3SesHtyGajjjI8dK6fBAFYJOwXbCivuwMSkilh5JZA/viewform"
+            class="text-box-button under18-club-book">Book</a>
+
+    </div>
+    <div class="under18-induction text-box">
+        <h1 class="text-box-title">JUNIOR INDUCTION</h1>
+        <h2 class="text-box-sub">Ages 14-17 • All Abilities Welcome • £20 • 1-4 Climbers</h2>
+        <p class="text-box-info">
+            Junior Inductions are for young climbers that would like to use the centre without supervision. During the
+            session the climbers will be shown how to use the centre safely. Afterwards, they’ll need to go on a junior
+            sign-off before the climb on their own, this is an assessment of they’re competency.
+        </p>
+        <a href="https://climber.hellocapitan.com/project/schedule/gym/11/87/num-participants/"
+            class="text-box-button under18-induction-book">Book</a>
+    </div>
+
+</div>
+<div class="cookie-pop none">
+    <p>
+        We use cookies and similar technologies to enable services and functionality on our site and to understand your
+        interaction with our service. By clicking on accept, you agree to our use of such technologies for marketing and
+        analytics <a href="">see our Privacy Policy.</a>
+    </p>
+    <div class="cookie-pop-buttons">
+        <button onclick="openSettings()">Cookie Settings</button>
+        <button id="acceptAll" name="cookie-pop">Accept</button>
+    </div>
+</div>
+<div class="cookie-settings none">
+    <div class="cookie-settings-box">
+        <h4>Cookie Settings</h4>
+        <div class="essential cookie-opt">
+            <h5 class="cookie-title">Essential Cookies</h5>
+            <div class="cookie-flex">
+                <p>
+                    These cookies enable core functionality such as security, verification of identity and network
+                    management. These cookies can’t be disabled.
+                </p>
+                <input type="checkbox" onclick="return false;" class="checkbox" checked>
+            </div>
+        </div>
+        <div class="marketing cookie-opt">
+            <h5 class="cookie-title">Enable Marketing Cookies</h5>
+            <div class="cookie-flex">
+                <p>
+                    These cookies are used to track advertising effectiveness to provide a more relevant service and
+                    deliver better ads to suit your interests.
+                </p>
+                <input type="checkbox" class="checkbox" id="checkbox" name="marketCookie">
+            </div>
+        </div>
+        <div class="functional cookie-opt">
+            <h5 class="cookie-title">Enable Funtional Cookies</h5>
+            <div class="cookie-flex">
+                <p>
+                    These cookies collect data to remember choices users make to improve and give a more personalised
+                    experience.
+                </p>
+                <input type="checkbox" class="checkbox" id="checkbox" name="functionCookie">
+            </div>
+        </div>
+        <div class="essential cookie-opt">
+            <h5 class="cookie-title">Enable Analytics Cookies</h5>
+            <div class="cookie-flex">
+                <p>
+                    These cookies help us to understand how visitors interact with our website, discover errors and
+                    provide a better overall analytics.</p>
+                <input type="checkbox" class="checkbox" id="checkbox" name="analyCookie">
+            </div>
+        </div>
+        <div class="cookie-buttons"><button class="save" id="saveCookie">Save Cookie Settings</button><button
+                class="accept" id="acceptAll" name="cookie-settings">Accept All</button></div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a class="footer-a" href="../contact.html">Contact Us</a>
+        <a class="footer-a" onclick="return openSettings()">Cookie Settings</a>
+        <a class="footer-a" href="privacy-policy.pdf">Privacy Policy</a>
+    </div>
+    <div class="socials">
+        <a href=""><img class="footer-fb" src="../assets/img/icons/facebook.svg" alt="facebook logo"></a>
+        <a href=""><img class="footer-insta" src="../assets/img/icons/instagram.svg" alt="instagram logo"></a>
+    </div>
+</footer>
+
+<script src="../assets/scripts/nav.js"></script>
+<script type="module" src="../node_modules/js-cookie/dist/js.cookie.mjs"></script>
+<script type="module" src="../assets/scripts/cookies.js"></script>
+
+</body>
+
+</html>

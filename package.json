@@ -1,0 +1,22 @@
+{
+  "name": "build",
+  "version": "1.0.0",
+  "description": "to-do: home page hrefs photos mobmenu arrows rotate g maps billing email form func# meta desc content",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hayden-110/the-project-climbing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hayden-110/the-project-climbing/issues"
+  },
+  "homepage": "https://github.com/hayden-110/the-project-climbing#readme",
+  "dependencies": {
+    "js-cookie": "^3.0.1"
+  }
+}

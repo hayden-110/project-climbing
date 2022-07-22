@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="assets/stylesheets/frame.css">
     <link rel="stylesheet" href="assets/stylesheets/climbing.css">
 
     <!-- adobe font -->
@@ -34,10 +35,10 @@
                 alt="The Project with logo which is the outline of a climbing hold with button eyes" class="nav-img"></a>
 
         <div class="nav-links">
-            <div class="search"><input type="text" placeholder="Search" class="search-box">
+            <!-- <div class="search"><input type="text" placeholder="Search" class="search-box">
                 <button class="search-enter"><img src="/assets/img/icons/search.svg" alt="search symbol" class="search-enter-img"></button>
-            </div>
-            <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop" class="shop-img"></a>
+            </div> -->
+            <!-- <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop" class="shop-img"></a> -->
             <a href="https://climber.hellocapitan.com/project/login/" class="capitan">
                 <img src="/assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother" class="capitan-img"></a>
         </div>
@@ -49,82 +50,185 @@
             <div class="mob-menu-items">
                 <div class="close" onclick="closeMenu()"><img src="/assets/img/icons/close.svg"
                         alt="cross to close menu"></div>
-                <a href="" class="nav-climbing">Climbing</a>
-                <a href="" class="nav-yoga">Yoga</a>
-                <a href="" class="nav-info">About</a>
-                <a href="" class="nav-events">Events</a>
-                <a href="" class="nav-blog">Blog</a>
-                <a href="" class="nav-contact">Contact Us</a>
+                        <div class="mob-menu-droplist">
+                            <div class="mob-menu-droplist-par" onclick="subMenu(mobClimbing, climbingArr)"><div class="mob-menu-droplist-head">Climbing</div><img src="/assets/img/icons/mob-menu-arr.svg" alt="arrow" class="mob-menu-droplist-arr" id="climbing-arr"></div>
+                            <ul class=" mob-menu-droplist-items droplist-climbing none">
+                                <a href="/beginners.html">Beginners</a>
+                                <a href="/experienced.html">Experienced</a>
+                                <a href="/under-18.html">Under 18's</a>
+                                <a href="/classes.html" class="dropdown-item">Classes</a>
+                                <a href="/groups.html">Groups</a>
+                            </ul>
+                        </div>
+                <a href="/yoga.html" class="nav-yoga">Yoga</a>
+                <div class="mob-menu-droplist">
+                    <div class="mob-menu-droplist-par" onclick="subMenu(mobAbout, aboutArr)"><a class="mob-menu-droplist-head" href="about.html">About</a><img src="/assets/img/icons/mob-menu-arr.svg" alt="arrow" class="mob-menu-droplist-arr" id="about-arr"></div>
+                    <ul class=" mob-menu-droplist-items droplist-about none">
+                        <a href="/pricing.html">Prices & Opening Hours</a>
+                        <a href="/pricing.html">Facilities</a>
+                        <a href="/studio-hire.html">Studio Hire</a>
+                    </ul>
+                </div>
+                <!-- <a href="/events.html" class="nav-events">Events</a>
+                <a href="/blog.html" class="nav-blog">Blog</a> -->
+                <a href="/contact.html" class="nav-contact">Contact Us</a>
                 <div class="mob-menu-items-bottom">
-                    <a href=""><img src="/assets/img/icons/shop-logo.svg" alt="" class="mob-shop"></a>
+                    <!-- <a href=""><img src="/assets/img/icons/shop-logo.svg" alt="" class="mob-shop"></a> -->
                     <a href="https://climber.hellocapitan.com/project/login/" class="mob-capitan"><img
                             src="/assets/img/icons/capitan-title.svg" alt="capitan logo" class="mob-capitan-img"></a>
                     <div class="mob-socials">
-                        <a href=""><img src="/assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
-                        <a href=""><img src="/assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
+                        <a href="https://www.facebook.com/TheProjectClimbingCentre"><img src="/assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
+                        <a href="https://www.instagram.com/theprojectclimbingcentre/?hl=en"><img src="/assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
                     </div>
-
                 </div>
             </div>
         </div>
     </nav>
     <div class="nav-links-secondary">
         <div class="nav-links-secondary-links">
-            <a href="" class="nls-a nav-climbing">Climbing</a>
-            <a href="" class="nls-a nav-yoga">Yoga</a>
-            <a href="" class="nls-a nav-info">About</a>
-            <a href="" class="nls-a nav-events">Events</a>
-            <a href="" class="nls-a nav-blog">Blog</a>
-            <a href="" class="nls-a nav-contact">Contact Us</a>
+            <div class="dropdown">
+                <p class="nls-a nav-climbing">Climbing</p>
+                <ul class="dropdown-box">
+                    <a href="/beginners.html" class="dropdown-item">Beginners</a>
+                    <a href="/experienced.html" class="dropdown-item">Experienced</a>
+                    <a href="/under-18.html" class="dropdown-item">Under 18's</a>
+                    <a href="/classes.html" class="dropdown-item">Classes</a>
+                    <a href="/groups.html" class="dropdown-item">Groups</a>
+                </ul>
+            </div>
+            <a href="/yoga.html" class="nls-a nav-yoga">Yoga</a>
+            <a href="/about.html" class="nls-a nav-info">About</a>
+            <!-- <a href="/events.html" class="nls-a nav-events">Events</a>
+            <a href="/blog.html" class="nls-a nav-blog">Blog</a> -->
+            <a href="/contact.html" class="nls-a nav-contact">Contact Us</a>
         </div>
     </div>
 
-    <div class="beginners">
-        <div class="beginners-intro">
-            <h1 class="beginners-intro-title text-box-title">New To Climbing?</h1>
-            <p class="beginners-intro-text text-box-info">If you are a new to bouldering, you can either come on to one of our inductions or you can go with a friend
-                thats experienced in bouldering.</p>
-        </div>
-
-
-        <div class="beginners-induction">
-            <div class="beginners-induction-text text-box">
-                <h1 class="beginners-induction-title text-box-title">ADULT INDUCTION</h1>
-                <p class="beginners-induction-info text-box-info">Inductions are for adults who are new to bouldering and
-                    would like to use our centre. During our induction you'll learn how to keep yourself and others safe
-                    when climbing.</p>
-                <p class="beginners-induction-price text-box-info">£20 per person<br />Tue - 19:00 - 20:00<br />Sat &
-                    Sun - 14:30 - 15:30
-                </p>
-                <button class="beginners-induction-book text-box-button">Book</button>
-            </div>
-            <div class="beginners-induction-image-overlay"><img src="/assets/img/induction.jpg" alt=""
-                    class="beginners-induction-image text-box-image"></div>
-        </div>
-
-        <div class="beginners-family">
-            <div class="beginners-family-image-overlay"><img src="/assets/img/family.jpg" alt=""
-                    class="beginners-family-image text-box-image"></div>
-            <div class="beginners-family-text text-box">
-                <h1 class="beginners-family-title text-box-title">FAMILY<br />INDUCTION</h1>
-                <p class="beginners-family-info text-box-info">During the school holidays we run inductions for families.</p>
-                <p class="beginners-family-price text-box-info"></p>
-                <button class="beginners-family-book text-box-button">Book</button>
+    <div class="beginners text-box">
+        <div class=" text-box-section beginners-intro">
+            <div class="text-box-text">
+                <h1 class="beginners-intro-title text-box-title">New To Bouldering?</h1>
+                <p class="beginners-intro-text text-box-info">If you are a new to bouldering, you can either come on to one of our inductions or you can go with a friend
+                    thats experienced in bouldering.</p>
             </div>
         </div>
 
 
-        <div class="beginners-supervised">
-            <div class="beginners-supervised-text text-box">
+        <div class="beginners-induction text-box-section">
+            <div class="beginners-induction-text text-box-text">
+                    <h1 class="beginners-induction-title text-box-title">ADULT INDUCTION</h1>
+                    <p class="beginners-induction-info text-box-info">Inductions are for adults who are new to bouldering and
+                        would like to use our centre. During our induction you'll learn how to keep yourself and others safe
+                        when climbing.</p>
+                    <p class="beginners-induction-price text-box-info">£20 per person<br />Tue - 19:00 - 20:00<br />Sat &
+                        Sun - 14:30 - 15:30
+                    </p>
+                    <a class="beginners-induction-book text-box-button" href="https://climber.hellocapitan.com/project/schedule/gym/11/57/num-participants/">Book</a>
+                </div>
+            <div class="text-box-img"><img src="/assets/img/induction.jpg" alt=""></div>
+        </div>
+
+        <div class="beginners-family text-box-section">
+            <div class="text-box-img beginners-family-img"><img src="/assets/img/family.jpg" alt=""></div>
+            <div class="beginners-family-text text-box-text">
+                    <h1 class="beginners-family-title text-box-title">FAMILY<br />INDUCTION</h1>
+                    <p class="beginners-family-info text-box-info">During the school holidays we run inductions for families.</p>
+                    <a class="beginners-family-book text-box-button" href="https://climber.hellocapitan.com/project/schedule/gym/11/136/num-participants/">Book</a>
+            </div>
+        </div>
+
+
+        <div class="beginners-supervised text-box-section">
+            <div class="beginners-supervised-text text-box-text">
                 <h1 class="beginners-supervised-title text-box-title">CLIMB WITH AN EXPERIENCED FRIEND</h1>
                 <p class="beginners-supervised-info text-box-info">A competent climber can supervise 2 people.
                     Once a supervised climber has visited 3 times, they are able to register as a unsupervised adult. Our normal prices apply.</p>
             </div>
-            <div class="beginners-supervised-image-overlay"><img src="/assets/img/induction.jpg" alt=""
-                class="beginners-supervised-image text-box-image"></div>
+            <div class="text-box-img"><img src="/assets/img/climb-friends.jpg" alt=""></div>
         </div>
     </div>
 
+    <div class="experienced text-box">
+        <div class="text-box-section">
+            <div class="text-box-text">
+            <h1 class="text-box-title">EXEPERIENCED CLIMBERS</h1>
+                <p class="text-box-info">If you have climbed regularly at another bouldering centre then you can climb at The Project. You'll just need to register with us, you can do that at the centre or <a href="https://climber.hellocapitan.com/project/documents/fill/init/64/" class="alink">online here.</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="under18 text-box">
+        <div class="under18-intro text-box-section">
+            <div class="text-box-text">
+                <h1 class="text-box-title">UNDER 18'S</h1>
+                <p class="text-box-info">Children from the age of 4 can climb. An adult can bring 2 children if they are registered with us, have previous bouldering experience, and can safely supervise their child. Our instructed sessions start at the age of 7 and up, look at the junior sessions we offer.</p>
+            </div>
+        </div>
+        <div class="under18-casual text-box-section">
+             <div class="text-box-text">
+                 <h1 class="text-box-title">JUNIOR CASUAL SESSION</h1>
+                 <h2 class="text-box-sub">Ages 7-13 • Suited for Beginners • 1 Hour • £12</h2>
+                 <p class="text-box-info">
+                    Junior Casual Sessions are. During the session the group will play some warm up games and exercises, they'll take part in a safety briefing before they climb. The Instructor will then supervise them climbing. We run these sessions on weekends and in the holidays. Due to the session being short, it is important that you arrive to the centre on time. There are places for the parents/carers to spectate, however they won't be allowed in the climbing area.
+                 </p>
+                 <a class="under18-casual-book text-box-button" href="https://climber.hellocapitan.com/project/schedule/gym/11/86/num-participants/">Book</a>
+             </div>
+             <div class="text-box-img"><img src="/assets/img/adam-club.jpg" alt=""></div>
+        </div>
+        <div class="under18-club text-box-section">
+             <div class="text-box-text">
+                 <h1 class="text-box-title">JUNIOR NIBAS CLUB</h1>
+                 <h2 class="text-box-sub">Ages 7-17 • All Abilities Welcome</h2>
+                 <p class="text-box-info">
+                    Junior Clubs follow the NICAS Bouldering scheme, it has 5 levels which take young climbers from beginners to young athletes. They run alongside the school's half terms. The sessions are 1 1/2 sessions long which run in the evenings. See the calendar for pricing, as it depends on the length of the half term.
+                 </p>
+                 <a href="https://docs.google.com/forms/d/e/1FAIpQLScjngaW3SesHtyGajjjI8dK6fBAFYJOwXbCivuwMSkilh5JZA/viewform" class="text-box-button under18-club-book">Book</a>
+             </div>
+            
+        </div>
+        <div class="under18-induction text-box-section">
+             <div class="text-box-text">
+                 <h1 class="text-box-title">JUNIOR INDUCTION</h1>
+                 <h2 class="text-box-sub">Ages 14-17 • All Abilities Welcome • £20</h2>
+                 <p class="text-box-info">
+                    Junior Inductions are for young climbers that would like to use the centre without supervision. During the session the climbers will be shown how to use the centre safely. Afterwards, they’ll need to go on a junior sign-off before the climb on their own, this is an assessment of they’re competency.
+                 </p>
+                 <a href="https://climber.hellocapitan.com/project/schedule/gym/11/87/num-participants/" class="text-box-button under18-induction-book">Book</a>
+             </div>
+        </div>
+        
+    </div>
+
+    <div class="group text-box">
+        <div class="group-bookings text-box-section">
+            <div class="text-box-text">
+                <h1 class="text-box-title">GROUP BOOKINGS</h1>
+                <p class="text-box-info">
+                    We run sessions for groups like Scouts, Guides, Educational Groups and more! One of our Instructors will show you all there is to know on bouldering. We accomadate upto 24 participants at a time. For more details, please send us a message on our contact page.
+                </p>
+            </div>
+        </div>
+        <div class="group-external text-box-section">
+            <div class="text-box-text">
+                <h1 class="text-box-title">FOR EXTERNAL INSTRUCTORS</h1>
+                <p class="text-box-info">
+                    An qualified external instructor can bring upto 12 climbers to our centre. Please send us a copy of your Mountain Training qualification, your insurance and first aid certificate ahead of time.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="coaching text-box">
+        <div class="text-box-section">
+            <div class="text-box-text">
+                <h1 class="text-box-title">Private Coaching</h1>
+                <p class="text-box-info">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore quam unde ea commodi sed deleniti eius blanditiis quos illum laboriosam!
+                </p>
+            </div>
+        </div>
+    </div>
+    
     <script src="/assets/scripts/nav.js"></script>
 </body>
 

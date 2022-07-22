@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/lux5twu.css">
 
     <!-- favicon -->
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="assets\img\icons\favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets\img\icons\favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets\img\icons\favicon/favicon-16x16.png">
@@ -22,62 +23,93 @@
     <title>The Project Climbing Centre</title>
     <meta name="description" content="A climbing centre in poole">
 </head>
+
 <body>
     <nav class="nav">
-        <a class="logo-box" href="/"><img src="/assets/img/logo+title.svg" alt="The Project with logo which is the outline of a climbing hold with button eyes" class="logo-img"></a>
-    
-        <div class="nav-links">
-            <div class="search">
-                <input type="text" placeholder="Search" class="search-box">
-                <button class="search-enter"><img src="/assets/img/icons/search.svg" alt="search symbol" class="search-icon"></button></div>
-            <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop" class="shop-logo"></a>
-            <a href="https://climber.hellocapitan.com/project/login/" class="capitan"><img src="/assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother" class="capitan-logo"></a>
-        </div>
-        <div class="burger-menu" onclick="openMenu()"><img src="/assets/img/icons/burger.svg" alt="hamburger menu"></div>
+        <a class="logo-box" href="/"><img src="/assets/img/logo+title.svg"
+                alt="The Project with logo which is the outline of a climbing hold with button eyes"
+                class="logo-img"></a>
 
-        <div class="mob-menu none">
-            <div class="mob-menu-background"></div>
-            <div class="mob-menu-items">
-                <div class="close" onclick="closeMenu()"><img src="/assets/img/icons/close.svg" alt="cross to close menu"></div>
-                <a href="" class="link nav-climbing">Climbing</a>
-                <a href="" class="link nav-yoga">Yoga</a>
-                <a href="" class="link nav-info">About</a>
-                <a href="" class="link nav-events">Events</a>
-                <a href="" class="link nav-blog">Blog</a>
-                <a href="" class="link nav-contact">Contact Us</a>
-                <div class="mob-menu-items-bottom">
-                    <a href="" ><img src="/assets/img/icons/shop-logo.svg" alt="" class="mob-shop"></a>
-                    <a href="https://climber.hellocapitan.com/project/login/" class="mob-capitan"><img src="/assets/img/icons/capitan-title.svg" alt="capitan logo" class="mob-capitan-img"></a>
-                    <div class="mob-socials">
-                        <a href=""><img src="/assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
-                        <a href=""><img src="/assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
-                    </div>
-                    
-                </div>
-            </div>
+        <div class="nav-links">
+            <a href="https://climber.hellocapitan.com/project/login/" class="capitan"><img
+                    src="/assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother"
+                    class="capitan-logo"></a>
         </div>
+        <div class="burger-menu" onclick="openMenu()"><img src="/assets/img/icons/burger.svg" alt="hamburger menu"
+                class="burger-menu-img"></div>
+
+                <div class="mob-menu none">
+                    <div class="mob-menu-background"></div>
+                    <div class="mob-menu-items">
+                        <div class="close" onclick="closeMenu()"><img src="../assets/img/icons/close.svg"
+                                alt="cross to close menu"></div>
+                                <div class="mob-menu-droplist">
+                                    <div class="mob-menu-droplist-par" onclick="subMenu(mobClimbing, climbingArr)"><div class="mob-menu-droplist-head">Climbing</div><img src="../assets/img/icons/mob-menu-arr.svg" alt="arrow" class="mob-menu-droplist-arr" id="climbing-arr"></div>
+                                    <ul class=" mob-menu-droplist-items droplist-climbing none">
+                                        <a href="../climbing/beginners.html">Beginners</a>
+                                        <a href="../climbing/experienced.html">Experienced</a>
+                                        <a href="../climbing/under18.html">Under 18's</a>
+                                        <a href="../climbing/classes.html" class="dropdown-item">Classes</a>
+                                        <a href="../climbing/groups.html">Groups</a>
+                                    </ul>
+                                </div>
+                        <a href="../yoga.html" class="nav-yoga">Yoga</a>
+                        <div class="mob-menu-droplist">
+                            <div class="mob-menu-droplist-par" onclick="subMenu(mobAbout, aboutArr)"><div class="mob-menu-droplist-head">About</div><img src="../assets/img/icons/mob-menu-arr.svg" alt="arrow" class="mob-menu-droplist-arr" id="about-arr"></div>
+                            <ul class=" mob-menu-droplist-items droplist-about none">
+                                <a href="../pricing.html">Prices & Opening Hours</a>
+                                <a href="../pricing.html">Facilities</a>
+                                <a href="../studio-hire.html">Studio Hire</a>
+                            </ul>
+                        </div>
+                        <a href="../contact.html" class="nav-contact">Contact Us</a>
+                        <div class="mob-menu-items-bottom">
+                            <a href="https://climber.hellocapitan.com/project/login/" class="mob-capitan"><img
+                                    src="../assets/img/icons/capitan-title.svg" alt="capitan logo" class="mob-capitan-img"></a>
+                            <div class="mob-socials">
+                                <a href="https://www.facebook.com/TheProjectClimbingCentre"><img src="../assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
+                                <a href="https://www.instagram.com/theprojectclimbingcentre/?hl=en"><img src="../assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </nav>
 
     <div class="hero">
         <div class="hero-navigate">
-            
-            <a href="" class="a-link hover">BEGINNERS</a>
+
+            <a href="/climbing/beginners.html" class="a-link hover">BEGINNERS</a>
+            <a href="/climbing/experienced.html" class="a-link experienced">EXPERIENCED</a>
+            <a href="/climbing/under18.html" class="a-link under-18">UNDER 18's</a>
+            <a href="/climbing/classes.html" class="a-link ">CLASSES</a>
+            <a href="/climbing/groups.html" class="a-link ">GROUPS</a>
+            <a href="/about.html" class="a-link ">INFO</a>
+        </div>
+        <div class="hero-carousel">
+            <img class="hero-photo active" src="/assets/img/beginners.jpg" alt="" name>
+            <img class="hero-photo" src="/assets/img/experienced.jpg" alt="">
+            <img class="hero-photo" src="/assets/img/under-18.jpg" alt="">
+            <img class="hero-photo" src="/assets/img/classes.jpg" alt="">
+            <img class="hero-photo" src="/assets/img/groups.jpg" alt="">
+            <img class="hero-photo" src="/assets/img/info.jpg" alt="">
+
+        </div>
+    </div>
+
+    <div class="mob-hero">
+        <img src="/assets/img/mob-hero.jpg" alt="" class="mob-hero-img">
+        <div class="mob-hero-navigate">
+
+            <a href="beginners.html" class="a-link hover">BEGINNERS</a>
             <a href="" class="a-link experienced">EXPERIENCED</a>
             <a href="" class="a-link under-18">UNDER 18's</a>
             <a href="" class="a-link ">CLASSES</a>
             <a href="" class="a-link ">GROUPS</a>
             <a href="" class="a-link ">INFO</a>
         </div>
-        <div class="hero-carousel">
-            <img class="hero-photo active" src="/assets/img/beginners.jpg" alt="" name>
-            <img class="hero-photo" src="/assets/img/under-18.jpg" alt="">
-            <img class="hero-photo" src="/assets/img/experienced.jpg" alt="">
-            <img class="hero-photo" src="/assets/img/classes.jpg" alt="">
-            <img class="hero-photo" src="/assets/img/groups.jpg" alt="">
-            <img class="hero-photo" src="/assets/img/info.jpg" alt="">
-            
-        </div>
     </div>
+
+
 
     <div class="other-activities">
         <a href="" class="sub-link yoga">
@@ -104,212 +136,248 @@
         <a href="" class="sub-link studio">
             <h2 class="sub-title">STUDIO</h2>
         </a>
-        <button id="slide-left" class="left none" onclick="scrollActivities('left')"><img src="./assets/img/icons/left-arr.svg" alt="" class="left-arr"></button>
-        <button id="slide-right" class="right" onclick="scrollActivities('right')"><img src="./assets/img/icons/right-arr.svg" alt="" class="right-arr"></button>
+        <button id="slide-left" class="left none" onclick="scrollActivities('left')"><img
+                src="./assets/img/icons/left-arr.svg" alt="" class="left-arr"></button>
+        <button id="slide-right" class="right" onclick="scrollActivities('right')"><img
+                src="./assets/img/icons/right-arr.svg" alt="" class="right-arr"></button>
     </div>
 
-<div class="pricing">
-    <div class="tab">
-        <button class="tab-links" onclick="openPrice(event, 'session-entry')" id="defaultOpen">Session Entry</button>
-        <button class="tab-links" onclick="openPrice(event, 'punchcards')">Punchcards</button>
-        <button class="tab-links" onclick="openPrice(event, 'memberships')">Memberships</button>
-    </div>
-
-    <!-- Tab content -->
-    <div class="pricing-sect">
-
-        <div id="session-entry" class="pricing-block">
-
-            <div class="pricing-flex">
-                <div class="price-left">
-                    <div class="price">
-                        <h3 class="pricing-h3">Adult</h3>
-                        <p class="price-desc">£13</p>
-                    </div>
-                    <div class="price">
-                        <h3 class="pricing-h3">Consession*</h3>
-                        <p class="price-desc">£8.50</p>
-                    </div>
-                    <div class="price">
-                        <h3 class="pricing-h3">Under 18's</h3>
-                        <p class="price-desc">£5</p>
-                    </div>
-                    <div class="price">
-                        <h3 class="pricing-h3">Supervisor</h3>
-                        <p class="price-desc">FREE</p>
-                    </div>
-                </div>
-                <div class="price-right">
-                    <div class="price">
-                        <h3 class="pricing-h3">Shoe Hire</h3>
-                        <p class="price-desc">£3</p>
-                    </div>
-                    <p class="price-desc">A registered climber can supervise 2 people.</p>
-                    <p class="price-desc">All climber must be aged between 4 - 99.</p>
-                    <!-- <p class="price-desc">If you climb here more than once a week, It may be worth looking at are punchcards or memberships.</p> -->
-                </div>
-            </div>
-            <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's and more
-            </p>
+    <div class="pricing">
+        <div class="tab">
+            <button class="tab-links session-entry" onclick="openPrice(event, 'session-entry')" id="defaultOpen">Session
+                Entry</button>
+            <button class="tab-links passes" onclick="openPrice(event, 'punchcards')">Punchcards</button>
+            <button class="tab-links member" onclick="openPrice(event, 'memberships')">Memberships</button>
         </div>
 
-        <div id="punchcards" class="pricing-block">
-            <div class="pricing-flex">
-                <div class="price-left">
-                    <div class="price">
-                        <h3 class="pricing-h3">Adult 5 Climb Pass</h3>
-                        <p class="price-desc">£40</p>
-                    </div>
-                    <div class="price">
-                        <h3 class="pricing-h3">Adult 10 Climb Pass</h3>
-                        <p class="price-desc">£70</p>
-                    </div>
-                    <div class="price">
-                        <h3 class="pricing-h3">Consession 5 Climb Pass</h3>
-                        <p class="price-desc">£35</p>
-                    </div>
-                    <div class="price">
-                        <h3 class="pricing-h3">Consession 10 Climb Pass</h3>
-                        <p class="price-desc">£60</p>
-                    </div>
-                </div>
-                <div class="price-right">
-                    <div class="price">
-                        <h3 class="pricing-h3">Under 18's 10 Climb Pass</h3>
-                        <p class="price-desc">£45</p>
-                    </div>
-                    <p class="price-desc">Passes expire 120 days after purchase.</p>
-                    <p class="price-desc">You can share passes with one selected other.</p>
-                </div>
-            </div>
-            <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's and more
-            </p>
-        </div>
+        <!-- Tab content -->
+        <div class="pricing-sect">
 
-        <div id="memberships" class="pricing-block">
-            <div class="pricing-flex">
-                <div class="price-col">
-                    <div class="price">
-                        <h3 class="pricing-h3">Adult Monthly</h3>
-                        <p class="price-desc">£50</p>
+            <button class="dropdown-price session-entry tab-links" onclick="openPrice(event, 'session-entry')" id="defaultOpen"><h4 class="tab-font">Session Entry</h4><img
+                src="./assets/img/icons/left-arr.svg" alt="" class="drop-arr"></button>
+            <div id="session-entry" class="pricing-block session-entry">
+
+                <div class="pricing-flex">
+                    <div class="price-left">
+                        <div class="price">
+                            <h3 class="pricing-h3">Adult</h3>
+                            <p class="price-desc">£13</p>
+                        </div>
+                        <div class="price">
+                            <h3 class="pricing-h3">Consession*</h3>
+                            <p class="price-desc">£8.50</p>
+                        </div>
+                        <div class="price">
+                            <h3 class="pricing-h3">Under 18's</h3>
+                            <p class="price-desc">£5</p>
+                        </div>
+                        <div class="price">
+                            <h3 class="pricing-h3">Supervisor</h3>
+                            <p class="price-desc">FREE</p>
+                        </div>
                     </div>
-                    <div class="price">
-                        <h3 class="pricing-h3">Adult Annual</h3>
-                        <p class="price-desc">£500</p>
+                    <div class="price-right">
+                        <div class="price">
+                            <h3 class="pricing-h3">Shoe Hire</h3>
+                            <p class="price-desc">£3</p>
+                        </div>
+                        <p class="price-desc price-info">A registered climber can supervise 2 people.</p>
+                        <p class="price-desc price-info">All climber must be aged between 4 - 99.</p>
+                        <!-- <p class="price-desc">If you climb here more than once a week, It may be worth looking at are punchcards or memberships.</p> -->
                     </div>
+                </div>
+                <p class="small-print pricing-flex">*Consession price apply to student, teachers, blue light holders, over 60's and
+                    more
+                </p>
+            </div>
+
+            <button class="dropdown-price passes tab-links" onclick="openPrice(event, 'punchcards')"><h4 class="tab-font">Bundled Passes</h4><img
+                src="./assets/img/icons/left-arr.svg" alt="" class="drop-arr"></button>
+
+            <div id="punchcards" class="pricing-block passes">
+                <div class="pricing-flex">
+                    <div class="price-left">
+                        <div class="price">
+                            <h3 class="pricing-h3">Adult 5 Climb Pass</h3>
+                            <p class="price-desc">£40</p>
+                        </div>
+                        <div class="price">
+                            <h3 class="pricing-h3">Adult 10 Climb Pass</h3>
+                            <p class="price-desc">£70</p>
+                        </div>
+                        <div class="price">
+                            <h3 class="pricing-h3">Consession 5 Climb Pass</h3>
+                            <p class="price-desc">£35</p>
+                        </div>
+                        <div class="price">
+                            <h3 class="pricing-h3">Consession 10 Climb Pass</h3>
+                            <p class="price-desc">£60</p>
+                        </div>
+                    </div>
+                    <div class="price-right">
+                        <div class="price">
+                            <h3 class="pricing-h3">Under 18's 10 Climb Pass</h3>
+                            <p class="price-desc">£45</p>
+                        </div>
+                        <p class="price-desc">Passes expire 120 days after purchase.</p>
+                        <p class="price-desc">You can share passes with one selected other.</p>
+                    </div>
+                </div>
+                <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's and
+                    more
+                </p>
+            </div>
+
+            <button class="dropdown-price member tab-links" onclick="openPrice(event, 'memberships')"><h4 class="tab-font">Memberships</h4><img
+                src="./assets/img/icons/left-arr.svg" alt="" class="drop-arr"></button>
+
+
+            <div id="memberships" class="pricing-block member">
+                <div class="price-row">
+                    <h3 class="pricing-h3 h3-bold">Monthly Membership</h3>
+                </div>
+
+                <div class="pricing-flex">
                     <div class="price-col">
                         <div class="price">
-                            <h3 class="pricing-h3">Consession Monthly</h3>
-                            <p class="price-desc">£40</p>
+                            <h3 class="pricing-h3">Adult Monthly</h3>
+                            <p class="price-desc">£50</p>
                         </div>
                         <div class="price">
-                            <h3 class="pricing-h3">Consession Annual</h3>
-                            <p class="price-desc">£400</p>
+                            <h3 class="pricing-h3">Adult Annual</h3>
+                            <p class="price-desc">£500</p>
+                        </div>
+                        <div class="price-col">
+                            <div class="price">
+                                <h3 class="pricing-h3">Consession Monthly</h3>
+                                <p class="price-desc">£40</p>
+                            </div>
+                            <div class="price">
+                                <h3 class="pricing-h3">Consession Annual</h3>
+                                <p class="price-desc">£400</p>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="price-col">
+                        <div class="price">
+                            <h3 class="pricing-h3">Unlimited Climbing +</h3>
+                        </div>
+                        <li class="pricing-li">Unlimited free first time guest passes</li>
+                        <li class="pricing-li">Two guest passes a month</li>
+                        <li class="pricing-li">Free monthly training workshop</li>
+                        <li class="pricing-li">Free weekly conditioning passes</li>
+                        <li class="pricing-li">One yoga class a month</li>
+                        <li class="pricing-li">Free shoe hire</li>
+                    </div>
+                </div>
+                <div class="price-plus">
+                    <div class="price-row">
+                        <h3 class="pricing-h3">Monthly Membership Plus</h3>
+                    </div>
+                    <div class="pricing-flex">
+                        <div class="price-left price-col">
+                            <div class="price">
+                                <h3 class="pricing-h3">Adult Monthly</h3>
+                                <p class="price-desc">£50</p>
+                            </div>
+                            <div class="price">
+                                <h3 class="pricing-h3">Consession Monthly</h3>
+                                <p class="price-desc">£40</p>
+                            </div>
+                        </div>
+                        <div class="price-right">
+                            <div class="price">
+                                <h3 class="pricing-h3">Monthly Membership +</h3>
+                            </div>
+                            <li class="pricing-li">Unlimited gym entry</li>
+                            <li class="pricing-li">One weekly yoga class</li>
+                        </div>
+                    </div>
+                    <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's
+                        and more</p>
                 </div>
 
-                <div class="price-col">
-                    <div class="price">
-                        <h3 class="pricing-h3">Unlimited Climbing +</h3>
+                <div class="price-family">
+                    <div class="price-row">
+                        <h3 class="pricing-h3">Family Memberships</h3>
                     </div>
-                    <li class="pricing-li"Unlimited free first time guest passes</li>
-                    <li class="pricing-li"Two guest passes a month</li>
-                    <li class="pricing-li"Free monthly training workshop</li>
-                    <li class="pricing-li"Free weekly conditioning passes</li>
-                    <li class="pricing-li"One yoga class a month</li>
-                    <li class="pricing-li"Free shoe hire</li>
-                </div>
-            </div>
-            <div class="price-plus">
-                <div class="price-row"><h3 class="pricing-h3">Monthly Membership Plus</h3></div>
-                <div class="pricing-flex">
-                    <div class="price-left">
-                    <div class="price">
-                        <h3 class="pricing-h3">Adult Monthly</h3>
-                        <p class="price-desc">£50</p>
-                    </div>
-                        <div class="price">
-                            <h3 class="pricing-h3">Consession Monthly</h3>
-                            <p class="price-desc">£40</p>
+                    <div class="pricing-flex">
+                        <div class="price-left price-col">
+                            <div class="price">
+                                <h3 class="pricing-h3">Adult + Child</h3>
+                                <p class="price-desc">£70</p>
+                            </div>
+                            <div class="price">
+                                <h3 class="pricing-h3">Adult + 2 Children</h3>
+                                <p class="price-desc">£90</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="price-right">
-                        <div class="price">
-                            <h3 class="pricing-h3">Monthly Membership +</h3>
-                        </div>
-                        <li class="pricing-li"Unlimited gym entry</li>
-                        <li class="pricing-li"One weekly yoga class</li>
-                    </div>
-                </div>
-                <p class="small-print">*Consession price apply to student, teachers, blue light holders, over 60's and more</p>
-            </div>
-
-            <div class="price-family">
-                <div class="price-row"><h3 class="pricing-h3">Family Memberships</h3></div>
-                <div class="pricing-flex">
-                    <div class="price-left">
-                    <div class="price">
-                        <h3 class="pricing-h3">Adult + Child</h3>
-                        <p class="price-desc">£70</p>
-                    </div>
-                        <div class="price">
-                            <h3 class="pricing-h3">Adult + 2 Children</h3>
-                            <p class="price-desc">£90</p>
-                        </div>
-                        <div class="price">
-                            <h3 class="pricing-h3">2 Adults + 1 Child</h3>
-                            <p class="price-desc">£100</p>
-                        </div>
-                        <div class="price">
-                            <h3 class="pricing-h3">2 Adults + 2 Children</h3>
-                            <p class="price-desc">£120</p>
-                        </div>
-                    </div>
-                    <div class="price-right">
-                        <div class="price">
-                            <h3 class="pricing-h3">2 Adults + 3 Children</h3>
-                            <p class="price-desc">£140</p>
-                        </div>
+                        <div class="price-right">
+                            <div class="price">
+                                <h3 class="pricing-h3">2 Adults + 1 Child</h3>
+                                <p class="price-desc">£100</p>
+                            </div>
+                            <div class="price">
+                                <h3 class="pricing-h3">2 Adults + 2 Children</h3>
+                                <p class="price-desc">£120</p>
+                            </div>
+                            <div class="price">
+                                <h3 class="pricing-h3">2 Adults + 3 Children</h3>
+                                <p class="price-desc">£140</p>
+                            </div>
                             <div class="price">
                                 <h3 class="pricing-h3">2 Adults + 4 Children</h3>
                                 <p class="price-desc">£160</p>
                             </div>
                         </div>
+                    </div>
                 </div>
+
             </div>
-
-        </div>
+            </div>
     </div>
-</div>
 
-<div class="centre-details">
-    <div class="centre-details-text">
-        <div class="open-hours">
-            <h4 class="centre-details-title">Opening Times</h4>
-            <p class="centre-details-p">Mon, Wed & Fri: 10.00-22.00</p>
-            <p class="centre-details-p">Tue & Thu: 16.00-22.00</p>
-            <p class="centre-details-p">Sat & Sun: 10.00-20.00</p>
-            <p class="centre-details-p">Bank Holdidays: 10.00-18.00</p>
+    <div class="centre-details">
+        <div class="centre-details-text">
+            <div class="open-hours">
+                <h4 class="centre-details-title">Opening Times</h4>
+                <p class="centre-details-p">Mon, Wed & Fri: 10.00-22.00</p>
+                <p class="centre-details-p">Tue & Thu: 16.00-22.00</p>
+                <p class="centre-details-p">Sat & Sun: 10.00-20.00</p>
+                <p class="centre-details-p">Bank Holdidays: 10.00-18.00</p>
+            </div>
+            <div class="directions">
+                <h4 class="centre-details-title">Directions</h4>
+                <p class="centre-details-p">We are located on the 2nd floor of the Dolphin Centre, above KFC, HMV and
+                    the bus station, next to the Libary. We are a 5 minute walk away from the Dolphin Multi-Storey and
+                    Seldown car park.</p>
+                <p class="centre-details-p">We are a 10 minute walk away from the train station.</p>
+            </div>
         </div>
-        <div class="directions">
-            <h4 class="centre-details-title">Directions</h4>
-            <p class="centre-details-p">We are located on the 2nd floor of the Dolphin Centre, above KFC, HMV and the bus station, next to the Libary. We are a 5 minute walk away from the Dolphin Multi-Storey and Seldown car park.</p>
-            <p class="centre-details-p">We are a 10 minute walk away from the train station.</p>
-        </div>
+        <div class="map" id="map"></div>
     </div>
-    <div class="map" id="map"></div>
-</div>
 
-<div class="contact">
-    <div class="contact-form">
+    <div class="contact">
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" name="contact" onsubmit="return validateForm()">
+        <input type="hidden" name="access_key" value="54d55b52-88d2-4b64-b0c3-9a18b117a92f">
         <h5 class="contact-form-title">Message Us</h5>
         <input type="text" name="name" class="contact-form-name" placeholder="Name">
-        <input type="text" name="email" class="contact-form-email" placeholder="Email">
+        <label class="error" id="nameError"></label>
+
+        <input type="email" name="email" class="contact-form-email" placeholder="Email">
+        <label class="error" id="emailError"></label>
+
         <input type="text" name="phone" class="contact-form-phone" placeholder="Phone">
+        <label class="error" id="phoneError"></label>
+
         <textarea name="message" class="contact-form-message" placeholder="Message"></textarea>
-        <button class="contact-form-button">Send</button>
-    </div>
+        <label class="error" id="messageError"></label>
+
+
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <button type="submit" class="contact-form-button">Send</button>
+    </form>
     <div class="contact-details">
         <div class="contact-details-email">
             <h5 class="contact-details-email-title">Email</h5>
@@ -330,22 +398,81 @@
     </div>
 </div>
 
+        <div class="cookie-pop none">
+            <p>
+                We use cookies and similar technologies to enable services and functionality on our site and to understand your interaction with our service. By clicking on accept, you agree to our use of such technologies for marketing and analytics <a href="">see our Privacy Policy.</a>
+            </p>
+            <div class="cookie-pop-buttons">
+                <button onclick="openSettings()">Cookie Settings</button>
+                <button id="acceptAll" name="cookie-pop">Accept</button>
+            </div>
+        </div>
+        <div class="cookie-settings none">
+            <div class="cookie-settings-box">
+                <h4>Cookie Settings</h4>
+                <div class="essential cookie-opt">
+                    <h5 class="cookie-title">Essential Cookies</h5>
+                    <div class="cookie-flex">
+                        <p>
+                            These cookies enable core functionality such as security, verification of identity and network management. These cookies can’t be disabled.
+                        </p>
+                        <input type="checkbox" onclick="return false;" class="checkbox" checked>
+                    </div>
+                </div>
+                <div class="marketing cookie-opt">
+                    <h5 class="cookie-title">Enable Marketing Cookies</h5>
+                    <div class="cookie-flex">
+                        <p>
+                            These cookies are used to track advertising effectiveness to provide a more relevant service and deliver better ads to suit your interests.
+                        </p>
+                        <input type="checkbox" class="checkbox" id="checkbox" name="marketCookie">
+                    </div>
+                </div>
+                <div class="functional cookie-opt">
+                    <h5 class="cookie-title">Enable Funtional Cookies</h5>
+                    <div class="cookie-flex">
+                        <p>
+                            These cookies collect data to remember choices users make to improve and give a more personalised experience.
+                        </p>
+                        <input type="checkbox" class="checkbox" id="checkbox" name="functionCookie">
+                    </div>
+                </div>
+                <div class="essential cookie-opt">
+                    <h5 class="cookie-title">Enable Analytics Cookies</h5>
+                    <div class="cookie-flex">
+                        <p>
+                            These cookies help us to understand how visitors interact with our website, discover errors and provide a better overall analytics.
+                        </p>
+                        <input type="checkbox" class="checkbox" id="checkbox" name="analyCookie">
+                    </div>
+                </div>
+                <div class="cookie-buttons"><button class="save" id="saveCookie">Save Cookie Settings</button><button class="accept" id="acceptAll" name="cookie-settings">Accept All</button></div>
+            </div>
+        </div> 
 
-<footer class="footer">
-    <div class="footer-links">
-        <a class="footer-a" href="">Contact Us</a>
-        <a class="footer-a" href="">Privacy Policy</a>
-        <a class="footer-a" href="">Recruitment</a>
-    </div>
-    <div class="socials"></div>
-</footer>
-    
+
+    <footer class="footer">
+        <div class="footer-links">
+            <a class="footer-a" href="">Contact Us</a>
+            <a class="footer-a" onclick="return openSettings()">Cookie Settings</a>
+            <a class="footer-a" href="">Privacy Policy</a>
+            <!-- <a class="footer-a" href="">Recruitment</a> -->
+        </div>
+        <div class="socials">
+            <a href="https://www.facebook.com/TheProjectClimbingCentre" ><img class="footer-fb" src="/assets/img/icons/facebook.svg" alt="facebook logo"></a>
+            <a href="https://www.instagram.com/theprojectclimbingcentre/?hl=en" ><img class="footer-insta" src="/assets/img/icons/instagram.svg" alt="instagram logo"></a>
+        </div>
+    </footer>
+
     <script src="/assets/scripts/home-func.js"></script>
     <script src="/assets/scripts/nav.js"></script>
     <script src="/assets/scripts/map.js"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOeSzqsTlvmKdirIjLzEvSUGzByWREGTc&callback=initMap&v=weekly"
-    ></script>
+    <script src="/assets/scripts/contact-form.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOeSzqsTlvmKdirIjLzEvSUGzByWREGTc&callback=initMap&v=weekly"></script>
+    <script type="module" src="/node_modules/js-cookie/dist/js.cookie.mjs"></script>
+
+    <script type="module" src="/assets/scripts/cookies.js"></script>
 
 </body>
+
 </html>

@@ -2,7 +2,8 @@
 # the-project-climbing
 
 to-code:
-home page hrefs
+beginners photo
+hrefs
 mobmenu arrows rotate
 meta desc content
 email form sent page
