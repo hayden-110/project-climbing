@@ -20,10 +20,10 @@ function validateForm() {
   } else {phoneErr.innerText = "";}
   let message = document.forms["contact"]["message"].value;
   let messageErr = document.getElementById('messageError');
-  if (message == "" || message.length > 50 || !/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gm.test(message)) {
-    messageErr.innerText = "Please enter a valid message with no web or email addresses";
-    return valid = false;
-  }  else {Err.innerText = "";}
+  // if (message == "" || message.length > 50 || !/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/gm.test(message)) {
+  //   messageErr.innerText = "Please enter a valid message with no web or email addresses";
+  //   return valid = false;
+  // }  else {Err.innerText = "";}
 
   if(valid = false){
     return false;

@@ -439,7 +439,6 @@
 @media (max-width: 960px) {
   .text-box-title {
     font-size: 30px;
-    width: fit-content;
   }
   .text-box-info {
     font-size: 18px;
