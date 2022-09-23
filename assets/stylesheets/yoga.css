@@ -6,9 +6,16 @@
   background-color: #1685bc;
 }
 .yoga-hero-img {
+  height: 300px;
   width: 100%;
   object-fit: cover;
-  object-position: 50% 50%;
+  object-position: 50% 60%;
+}
+.yoga-book {
+  color: #1685bc;
+}
+.yoga-price {
+  background-color: #16bcbc;
 }
 
 /*# sourceMappingURL=yoga.css.map */

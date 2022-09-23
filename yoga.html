@@ -30,84 +30,92 @@
     <body style="max-width: 100%; background-color: #faf4ee; margin: 0;">
 
     <nav class="nav">
-        <a class="logo" href="/"><img src="/assets/img/logo+title.svg"
-                alt="The Project with logo which is the outline of a climbing hold with button eyes" class="nav-img"></a>
+        <a class="logo" href="/"><img src="../assets/img/logo+title.svg"
+            alt="The Project with logo which is the outline of a climbing hold with button eyes" class="nav-img"></a>
 
-        <div class="nav-links">
-            <div class="search"><input type="text" placeholder="Search" class="search-box">
-                <button class="search-enter"><img src="/assets/img/icons/search.svg" alt="search symbol" class="search-enter-img"></button>
+    <div class="nav-links">
+        <!-- <div class="search"><input type="text" placeholder="Search" class="search-box">
+            <button class="search-enter"><img src="/assets/img/icons/search.svg" alt="search symbol" class="search-enter-img"></button>
+        </div> -->
+        <!-- <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop" class="shop-img"></a> -->
+        <a href="https://climber.hellocapitan.com/project/login/" class="capitan">
+            <img src="../assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother"
+                class="capitan-img"></a>
+    </div>
+
+    <div class="burger-menu" onclick="openMenu()"><img src="../assets/img/icons/burger.svg" alt="hamburger menu"
+            class="burger-menu-image"></div>
+    <div class="mob-menu none">
+        <div class="mob-menu-background"></div>
+        <div class="mob-menu-items">
+            <div class="close" onclick="closeMenu()"><img src="../assets/img/icons/close.svg" alt="cross to close menu">
             </div>
-            <a href="" class="shop"><img src="/assets/img/icons/shop-logo.svg" alt="The Shop" class="shop-img"></a>
-            <a href="https://climber.hellocapitan.com/project/login/" class="capitan">
-                <img src="/assets/img/icons/capitan.svg" alt="capitan logo, 3 diamonds crossed over eachother" class="capitan-img"></a>
-        </div>
-
-        <div class="burger-menu" onclick="openMenu()"><img src="/assets/img/icons/burger.svg" alt="hamburger menu"
-                class="burger-menu-image"></div>
-                <div class="mob-menu none">
-                    <div class="mob-menu-background"></div>
-                    <div class="mob-menu-items">
-                        <div class="close" onclick="closeMenu()"><img src="/assets/img/icons/close.svg"
-                                alt="cross to close menu"></div>
-                                <div class="mob-menu-droplist">
-                                    <div class="mob-menu-droplist-par" onclick="subMenu(mobClimbing, climbingArr)"><div class="mob-menu-droplist-head">Climbing</div><img src="/assets/img/icons/mob-menu-arr.svg" alt="arrow" class="mob-menu-droplist-arr" id="climbing-arr"></div>
-                                    <ul class=" mob-menu-droplist-items droplist-climbing none">
-                                        <a href="/beginners.html">Beginners</a>
-                                        <a href="/experienced.html">Experienced</a>
-                                        <a href="/under-18.html">Under 18's</a>
-                                        <a href="/classes.html" class="dropdown-item">Classes</a>
-                                        <a href="/groups.html">Groups</a>
-                                    </ul>
-                                </div>
-                        <a href="/yoga.html" class="nav-yoga">Yoga</a>
-                        <div class="mob-menu-droplist">
-                            <div class="mob-menu-droplist-par" onclick="subMenu(mobAbout, aboutArr)"><a class="mob-menu-droplist-head" href="about.html">About</a><img src="/assets/img/icons/mob-menu-arr.svg" alt="arrow" class="mob-menu-droplist-arr" id="about-arr"></div>
-                            <ul class=" mob-menu-droplist-items droplist-about none">
-                                <a href="/pricing.html">Prices & Opening Hours</a>
-                                <a href="/pricing.html">Facilities</a>
-                                <a href="/studio-hire.html">Studio Hire</a>
-                            </ul>
-                        </div>
-                        <!-- <a href="/events.html" class="nav-events">Events</a>
-                        <a href="/blog.html" class="nav-blog">Blog</a> -->
-                        <a href="/contact.html" class="nav-contact">Contact Us</a>
-                        <div class="mob-menu-items-bottom">
-                            <!-- <a href=""><img src="/assets/img/icons/shop-logo.svg" alt="" class="mob-shop"></a> -->
-                            <a href="https://climber.hellocapitan.com/project/login/" class="mob-capitan"><img
-                                    src="/assets/img/icons/capitan-title.svg" alt="capitan logo" class="mob-capitan-img"></a>
-                            <div class="mob-socials">
-                                <a href="https://www.facebook.com/TheProjectClimbingCentre"><img src="/assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
-                                <a href="https://www.instagram.com/theprojectclimbingcentre/?hl=en"><img src="/assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="mob-menu-droplist">
+                <div class="mob-menu-droplist-par" onclick="subMenu(mobClimbing, climbingArr)">
+                    <div class="mob-menu-droplist-head">Climbing</div><img src="../assets/img/icons/mob-menu-arr.svg"
+                        alt="arrow" class="mob-menu-droplist-arr" id="climbing-arr">
                 </div>
-            </nav>
-    <div class="nav-links-secondary">
-        <div class="nav-links-secondary-links">
-            <div class="dropdown">
-                <a href="" class="nls-a nav-climbing">Climbing</a>
-                <ul class="dropdown-box">
-                    <a href="" class="dropdown-item">Beginners</a>
-                    <a href="" class="dropdown-item">Experienced</a>
-                    <a href="" class="dropdown-item">Under 18's</a>
-                    <a href="" class="dropdown-item">Groups</a>
+                <ul class=" mob-menu-droplist-items droplist-climbing none">
+                    <a href="../climbing/beginners.html">Beginners</a>
+                    <a href="../climbing/experienced.html">Experienced</a>
+                    <a href="../climbing/under-18.html">Under 18's</a>
+                    <a href="../climbing/classes.html" class="dropdown-item">Classes</a>
+                    <a href="../climbing/groups.html">Groups</a>
                 </ul>
             </div>
-            <a href="" class="nls-a nav-yoga">Yoga</a>
-            <a href="" class="nls-a nav-info">About</a>
-            <div class="dropdown">
-                <a href="" class="nls-a nav-events">Events</a>
-                <ul class="dropdown-box">
-                    <a href="" class="dropdown-item">Prices & Opening Hours</a>
-                    <a href="" class="dropdown-item">Facilities</a>
-                    <a href="" class="dropdown-item">Studio Hire</a>
+            <a href="../yoga.html" class="nav-yoga">Yoga</a>
+            <div class="mob-menu-droplist">
+                <div class="mob-menu-droplist-par" onclick="subMenu(mobAbout, aboutArr)">
+                    <div class="mob-menu-droplist-head">About</div><img src="../assets/img/icons/mob-menu-arr.svg"
+                        alt="arrow" class="mob-menu-droplist-arr" id="about-arr">
+                </div>
+                <ul class=" mob-menu-droplist-items droplist-about none">
+                    <a href="../pricing.html">Prices & Opening Hours</a>
+                    <a href="../pricing.html">Facilities</a>
+                    <a href="../studio-hire.html">Studio Hire</a>
                 </ul>
             </div>
-            <a href="" class="nls-a nav-blog">Blog</a>
-            <a href="" class="nls-a nav-contact">Contact Us</a>
+            <!-- <a href="/events.html" class="nav-events">Events</a>
+            <a href="/blog.html" class="nav-blog">Blog</a> -->
+            <a href="../contact.html" class="nav-contact">Contact Us</a>
+            <div class="mob-menu-items-bottom">
+                <!-- <a href=""><img src="/assets/img/icons/shop-logo.svg" alt="" class="mob-shop"></a> -->
+                <a href="https://climber.hellocapitan.com/project/login/" class="mob-capitan"><img
+                        src="../assets/img/icons/capitan-title.svg" alt="capitan logo" class="mob-capitan-img"></a>
+                <div class="mob-socials">
+                    <a href="https://www.facebook.com/TheProjectClimbingCentre"><img
+                            src="../assets/img/icons/facebook.svg" alt="" class="mob-facebook"></a>
+                    <a href="https://www.instagram.com/theprojectclimbingcentre/?hl=en"><img
+                            src="../assets/img/icons/instagram.svg" alt="" class="mob-instagram"></a>
+                </div>
+            </div>
         </div>
     </div>
+</nav>
+<div class="nav-links-secondary">
+    <div class="nav-links-secondary-links">
+        <div class="dropdown">
+            <div class="nls-a nav-climbing">Climbing</div>
+            <ul class="dropdown-box">
+                <a href="../climbing/beginners.html" class="dropdown-item">Beginners</a>
+                <a href="../climbing/experienced.html" class="dropdown-item">Experienced</a>
+                <a href="../climbing/under-18.html" class="dropdown-item">Under 18's</a>
+                <a href="../climbing/classes.html" class="dropdown-item">Classes</a>
+                <a href="../climbing/groups.html" class="dropdown-item">Groups</a>
+            </ul>
+        </div>
+        <a href="../yoga.html" class="nls-a nav-yoga">Yoga</a>
+        <div class="dropdown">
+            <div class="nls-a nav-about">About</div>
+            <ul class="dropdown-box">
+                <a href="about" class="dropdown-item">Prices & Opening Hours</a>
+                <a href="" class="dropdown-item">Facilities</a>
+                <a href="../about/studio.html" class="dropdown-item">Studio Hire</a>
+            </ul>
+        </div>
+        <a href="" class="nls-a nav-contact">Contact Us</a>
+    </div>
+</div>
 
     <div class="yoga">
         
@@ -115,13 +123,25 @@
             <h1 class="yoga-title text-box-title">YOGA</h1>
         </div>
 
-        <div class=" yoga-hero text-box">
+        <div class="yoga-hero text-box">
             <img src="/assets/img/yoga-hero.jpg" alt="" class="yoga-hero-img text-box-section">
             <div class="text-box-section">
                 <div class="text-box-text">
-                    <p class="yoga-hero-text text-box-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptatem impedit beatae laborum id quisquam non tempora esse error. Distinctio!</p>
+                    <p class="yoga-hero-text text-box-info">Our yoga studio has recently been developed to create a peaceful space for our yogis. Our Instructors provide excellent classes that can improve your flexability.</p>
+                </div>
+                <div class="text-box-text">
+                    <h5 class="text-box-sub">Timetable:</h5>
+                    <ul class="yoga-hero-text text-box-info">
+                        <li>Tuesdays - 8-9PM</li>
+                        <li>Friday - 12-1PM, 7:30-8:30PM</li>
+                    </ul>
+                    <button class="text-box-button yoga-book">Book</button>
                 </div>
             </div>
+        </div>
+
+        <div class="yoga-price text-box">
+
         </div>
     </div>
     
